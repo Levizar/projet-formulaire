@@ -25,11 +25,11 @@ body {
 }
 
 nav a {
-  color: white;
+  color: #FFF;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: white;
+  color: #FFF;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -45,7 +45,7 @@ footer {
   position: sticky;
   top: 0px;
   background-color: #15c5bd;
-  color: white;
+  color: #FFF;
 }
 
 footer ul li {
@@ -53,7 +53,7 @@ footer ul li {
 }
 
 footer ul li .fab {
-  color: white;
+  color: #FFF;
 }
 
 footer ul li .fab:hover {
