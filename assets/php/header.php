@@ -28,9 +28,9 @@
                 <li class="nav-item col-2 <?php if($page == "products") echo " active";?>">
                     <a class="nav-link" href="products.php">Produits</a>
                 </li>
-
-                <a class="navbar-brand text-center col-0 col-lg-4" href="index.php">Hackers Poulette</a>
-
+                <li>
+                    <a class="navbar-brand text-center col-0 col-lg-4" href="index.php">Hackers Poulette</a>
+                </li>
                 <li class="nav-item col-4 <?php if($page == "contact") echo " active";?>">
                     <a class="nav-link text-right" href="contact.php">Contactez-nous</a>
                 </li>
