@@ -1,0 +1,18 @@
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  background-color: #F8F9FA;
+}
+
+footer ul li {
+  list-style-type: none;
+}
+
+footer ul li .fab {
+  color: #838484;
+}
+
+footer ul li .fab:hover {
+  color: #1f1f46;
+}
