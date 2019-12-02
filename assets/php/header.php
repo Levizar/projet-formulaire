@@ -26,7 +26,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-color">
+    <nav class="navbar navbar-expand-md navbar-dark bg-color">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -48,5 +48,4 @@
                 </li>
             </ul>
         </div>
-        <!-- <div class="col-0 col-lg-4"></div> -->
     </nav>
