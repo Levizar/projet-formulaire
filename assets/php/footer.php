@@ -5,7 +5,7 @@
             <li class="col-1 text-center"><a href=""><i class="fab fa-instagram fa-lg"></i></a></li>
             <li class="col-1 text-center"><a href=""><i class="fab fa-twitter-square fa-lg"></i></a></li>
             <li class="col-1 text-center"><a href=""><i class="fab fa-jedi-order fa-lg"></i></a></li>
-            <li class="col-4 ml-auto text-right" style="color:#838484">©2019 Hackers Poulette</li>
+            <li class="col-4 ml-auto text-right">©2019 Hackers Poulette</li>
         </ul>
     </footer>
 

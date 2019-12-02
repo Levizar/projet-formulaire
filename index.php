@@ -8,7 +8,6 @@ include 'assets/php/header.php';?>
 
 
 
-
 <!----------- Footer (with end tags) ----------->
 
 <?php include 'assets/php/footer.php';?> 

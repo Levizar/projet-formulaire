@@ -1,8 +1,35 @@
+// Variables
+$blue : #15c5bd;
+
+
+// Imports
+@font-face {
+  font-family: 'bellota';
+  src: url('../fonts/Bellota-Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: 'bellota', Arial, sans-serif;
+}
+
+.bg-color{
+  background-color: $blue;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{
+  color : white;
+}
+
+
+
 footer {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  background-color: #F8F9FA;
+  background-color: $blue;
+  color:lightgrey;
 }
 
 footer ul li {
@@ -10,9 +37,9 @@ footer ul li {
 }
 
 footer ul li .fab {
-  color: #838484;
+  color: lightgrey;
 }
 
 footer ul li .fab:hover {
-  color: #1f1f46;
+  color: white;
 }
