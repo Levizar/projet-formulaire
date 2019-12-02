@@ -13,6 +13,10 @@ $grey : #303030;
 
 body{
   font-family: 'bellota', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .bg-color{
