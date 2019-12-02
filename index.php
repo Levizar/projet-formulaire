@@ -1,7 +1,14 @@
 <?php
 $page = "accueil";
 
+// <!----------- Header (with head an body tags) ----------->
+
 include 'assets/php/header.php';?>
-    
-</body>
-</html>
+
+
+
+
+
+<!----------- Footer (with end tags) ----------->
+
+<?php include 'assets/php/footer.php';?> 
