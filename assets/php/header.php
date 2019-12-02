@@ -32,7 +32,7 @@
                 <a class="navbar-brand text-center col-0 col-lg-4" href="index.php">Hackers Poulette</a>
 
                 <li class="nav-item col-4 <?php if($page == "contact") echo "active";?>">
-                    <a class="nav-link" href="contact.php">Contactez-nous</a>
+                    <a class="nav-link text-right" href="contact.php">Contactez-nous</a>
                 </li>
             </ul>
         </div>
