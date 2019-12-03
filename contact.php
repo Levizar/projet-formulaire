@@ -6,7 +6,7 @@ $page = "contact";
 include 'assets/php/header.php';?>
 
 
-<div class="container col-6 ">
+<div class="container col-10 col-md-8 col-lg-6 ">
     <h1 class="text-center my-5">Contactez-nous</h1>
     
     <form method="POST">
@@ -78,7 +78,15 @@ include 'assets/php/header.php';?>
             </div>
         </div>
 
+        <!-- HONEY POT -->
+            <div class="col sacamerde" id="sacamerde">
+                <label for="tel">Téléphone</label>
+                <input type="numbers" class="form-control" placeholder="Votre n° de téléphone" name="tel">
+            </div>
+        <!-- FIN DU HONEY POT -->
+
         <input type="submit" value="Envoyer" class="mb-5">
+
             
     </form>
 </div>

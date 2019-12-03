@@ -6,12 +6,12 @@ $page = "accueil";
 include 'assets/php/header.php';?>
 
 <div class="container my-3">
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <div class="jumbotron ">
+        <h1 class="display-4 font-weight-bold">HACKERS POULETTE</h1>
+        <p class="lead">Hackers Poulette, c'est le meilleur revendeur de Raspberry de la région!</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <p>Si vous cherchiez à remplir un formulaire concernant un raspberry, ne cherchez plus ! Vous êtes en effet au bon endroit. N'hésitez pas à cliquer sur le lien menant à notre formulaire de contact où vous pourrez nous faire part de toutes vos observations.</p>
+        <a class="btn btn-primary btn-lg bg-color" href="contact.php" role="button">Vers le formulaire et le back-end !</a>
     </div>
 </div>
     

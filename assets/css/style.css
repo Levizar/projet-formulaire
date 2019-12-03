@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'bellota';
+  src: url("../fonts/Bellota-Bold-webfont.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   font-family: 'bellota', Arial, sans-serif;
   min-height: 100vh;
@@ -30,7 +37,7 @@ body nav a {
 
 body nav a:hover {
   text-decoration: none;
-  color: #303030;
+  color: #FFF;
 }
 
 body .navbar-dark .navbar-nav .nav-link {
@@ -39,10 +46,20 @@ body .navbar-dark .navbar-nav .nav-link {
 
 body .navbar-dark .navbar-nav .nav-link:hover {
   color: #303030;
+  text-decoration: none;
 }
 
 body .navbar-dark .navbar-nav .active .nav-link {
   color: #303030;
+}
+
+body .btn.btn-primary.bg-color {
+  background-color: #15c5bd;
+  border-color: #15c5bd;
+}
+
+body .btn.btn-primary.bg-color:hover {
+  background-color: #303030;
 }
 
 body footer {
@@ -64,5 +81,11 @@ body footer ul li .fab {
 
 body footer ul li .fab:hover {
   color: #303030;
+}
+
+form > div#sacamerde {
+  position: absolute;
+  top: 0;
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */
