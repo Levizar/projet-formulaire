@@ -51,6 +51,13 @@ body {
     }
   }
 
+  .btn.btn-primary.bg-color{
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    &:hover{
+      background-color: $secondaryColor;
+    }
+  }
 
 
   footer {

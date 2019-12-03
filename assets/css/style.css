@@ -45,6 +45,15 @@ body .navbar-dark .navbar-nav .active .nav-link {
   color: #303030;
 }
 
+body .btn.btn-primary.bg-color {
+  background-color: #15c5bd;
+  border-color: #15c5bd;
+}
+
+body .btn.btn-primary.bg-color:hover {
+  background-color: #303030;
+}
+
 body footer {
   position: -webkit-sticky;
   position: sticky;
