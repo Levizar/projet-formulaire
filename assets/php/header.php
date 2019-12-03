@@ -30,7 +30,7 @@
 <!--  Remplacement de tous les md par sm car suffisant avant expand -->
 <body>
     <!-- Remplacement lg par sm pour expand plus tôt car assez de place -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-color mb-2">
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-color mb-2">
     <!-- Doublé le navbar-brand : la class d-sm-none le fait disparaitre lors de l'expand -->
         <a class="navbar-brand text-center d-sm-none" href="index.php">Hackers Poulette</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
