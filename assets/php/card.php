@@ -2,7 +2,7 @@
 
 function generate_card($img_file_name, $title, $content, $link = "#"){
 
-echo    "<div class='card' style='width: 18rem;'>
+echo    "<div class='card col-12 col-sm-6 col-md-4' style='width: 18rem;'>
             <img src='assets/img/$img_file_name' class='card-img-top' alt='$title'>
             <div class='card-body'>
                 <h5 class='card-title'>$title</h5>
