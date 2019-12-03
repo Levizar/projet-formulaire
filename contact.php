@@ -9,14 +9,14 @@ include 'assets/php/header.php';?>
 <div class="container col-6 ">
     <h1 class="text-center my-5">Contactez-nous</h1>
     
-    <form>
+    <form method="POST">
         <div class="form-row my-3">
             <div class="col">
                 <label for="firstname">Prénom :</label>
                 <input type="text" class="form-control" placeholder="Votre prénom" name="firstname">
             </div>
             <div class="col">
-            <label for="firstname">Nom :</label>
+            <label for="lastname">Nom :</label>
             <input type="text" class="form-control" placeholder="Votre nom" name="lastname">
             </div>
         </div>
