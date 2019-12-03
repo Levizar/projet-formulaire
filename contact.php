@@ -25,19 +25,19 @@ include 'assets/php/header.php';?>
             <legend class="col-form-label col-sm-2 pt-0">Genre :</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="Homme" checked>
                     <label class="form-check-label" for="gridRadios1">
                         Homme
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="Femme">
                     <label class="form-check-label" for="gridRadios2">
                         Femme
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="Non-binaire">
                     <label class="form-check-label" for="gridRadios2">
                         Non-binaire
                     </label>
@@ -80,18 +80,16 @@ include 'assets/php/header.php';?>
 
         <!-- HONEY POT -->
             <div class="col sacamerde" id="sacamerde">
-                <label for="tel">Téléphone</label>
-                <input type="numbers" class="form-control" placeholder="Votre n° de téléphone" name="tel">
+                <label for="telephone">Téléphone</label>
+                <input type="numbers" class="form-control" placeholder="Votre n° de téléphone" name="telephone">
             </div>
         <!-- FIN DU HONEY POT -->
 
-        <input type="submit" value="Envoyer" class="mb-5">
-
-            
+        <input type="submit" value="Envoyer" class="mb-5">            
     </form>
 </div>
 
-
+<?php include 'assets/php/form.php';?>
 
 
 <!----------- Footer (with end tags) ----------->
