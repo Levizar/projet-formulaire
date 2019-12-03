@@ -1,8 +1,10 @@
 // Variables
-$blue : #15c5bd;
-$grey : #303030;
+//Changement des noms de variable pour coller aux normes
+// (si jamais le client veut changer de couleur, ces noms n'ont plus de sens)
+$primaryColor : #15c5bd;
+$secondaryColor : #303030;
 // remplacement des whites histoire d'être totalement cohérent. (et de pouvoir changer facilement après)
-$white: #FFF;
+$linkColor: #FFF;
 
 
 // Import de police
@@ -22,23 +24,23 @@ body{
 }
 
 .bg-color{
-  background-color: $blue;
+  background-color: $primaryColor;
 }
 
 nav a{
-  color : $white;
+  color : $linkColor;
 }
 
 .navbar-dark .navbar-nav .nav-link{
-  color : $white;
+  color : $linkColor;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover{
-  color : $grey;
+  color : $secondaryColor;
 }
 
 .navbar-dark .navbar-nav .active .nav-link{
-  color : $grey;
+  color : $secondaryColor;
 }
 
 
@@ -46,8 +48,8 @@ footer {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
-  background-color: $blue;
-  color:$white;
+  background-color: $primaryColor;
+  color:$linkColor;
 }
 
 footer ul li {
@@ -55,9 +57,9 @@ footer ul li {
 }
 
 footer ul li .fab {
-  color: $white;
+  color: $linkColor;
 }
 
 footer ul li .fab:hover {
-  color: $grey;
+  color: $secondaryColor;
 }
