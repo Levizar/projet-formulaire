@@ -55,6 +55,7 @@ body footer {
 
 body footer ul li {
   list-style-type: none;
+  white-space: nowrap;
 }
 
 body footer ul li .fab {

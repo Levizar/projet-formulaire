@@ -62,7 +62,7 @@ body {
 
     ul li {
       list-style-type: none;
-
+      white-space: nowrap;
       .fab {
         color: $linkColor;
 
