@@ -15,51 +15,61 @@ $linkColor: #FFF;
   font-style: normal;
 }
 
-body{
+body {
   font-family: 'bellota', Arial, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
 
-.bg-color{
-  background-color: $primaryColor;
-}
+  .bg-color {
+    background-color: $primaryColor;
+  }
 
-nav a{
-  color : $linkColor;
-}
+  nav {
+    a {
+      color: $linkColor;
 
-.navbar-dark .navbar-nav .nav-link{
-  color : $linkColor;
-}
+      &:hover {
+        text-decoration: none;
+        color: $secondaryColor;
+      }
+    }
+  }
 
-.navbar-dark .navbar-nav .nav-link:hover{
-  color : $secondaryColor;
-}
+  .navbar-dark .navbar-nav {
+    .nav-link {
+      color: $linkColor;
 
-.navbar-dark .navbar-nav .active .nav-link{
-  color : $secondaryColor;
-}
+      &:hover {
+        color: $secondaryColor;
+      }
+
+    }
+
+    .active .nav-link {
+      color: $secondaryColor;
+    }
+  }
 
 
-footer {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
-  background-color: $primaryColor;
-  color:$linkColor;
-}
+  footer {
+    // Retrait du -webkit- car le live sass le rajoute tout seul dans le fichier final
+    position: sticky;
+    top: 0px;
+    background-color: $primaryColor;
+    color: $linkColor;
 
-footer ul li {
-  list-style-type: none;
-}
+    ul li {
+      list-style-type: none;
 
-footer ul li .fab {
-  color: $linkColor;
-}
+      .fab {
+        color: $linkColor;
 
-footer ul li .fab:hover {
-  color: $secondaryColor;
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
 }
