@@ -30,9 +30,9 @@
 <!--  Remplacement de tous les md par sm car suffisant avant expand -->
 <body>
     <!-- Remplacement lg par sm pour expand plus tôt car assez de place -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-color mb-2">
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-color mb-2">
     <!-- Doublé le navbar-brand : la class d-sm-none le fait disparaitre lors de l'expand -->
-        <a class="navbar-brand text-center d-sm-none" href="index.php">Hackers Poulette</a>
+        <a class="navbar-brand text-center d-sm-none font-weight-bolder" href="index.php">Hackers Poulette</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
                 <!-- Ajout d-none pour ne pas display lors de la version mobile -->
                 <!-- Ajout d-sm-inline-block pour display lors de l'expand -->
                 <li class="navbar-brand col-4 text-center d-none d-sm-inline-block">
-                    <a class="" href="index.php">Hackers Poulette</a>
+                    <a class="font-weight-bolder" href="index.php">Hackers Poulette</a>
                 </li>
                 <li class="nav-item col-4 <?php if($page == "contact") echo " active";?>">
                     <a class="nav-link text-sm-right" href="contact.php">Contactez-nous</a>
