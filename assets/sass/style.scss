@@ -1,10 +1,11 @@
 // Variables
 $blue : #15c5bd;
 $grey : #303030;
+// remplacement des whites histoire d'être totalement cohérent. (et de pouvoir changer facilement après)
 $white: #FFF;
 
 
-// Imports
+// Import de police
 @font-face {
   font-family: 'bellota';
   src: url('../fonts/Bellota-Regular-webfont.woff') format('woff');
