@@ -49,7 +49,9 @@ function form_processing(){
     
     // Checking if the honeypot is still intact
     if($sanitized_form['model'] == ""){
-
+        // This variable become false only if at least one element is unvalid
+        $is_form_valid = true;
+        
         // Validation
         foreach($sanitized_form as $key => $value){
             // Erasing space before and after the answers
@@ -61,11 +63,12 @@ function form_processing(){
                 )){
                 }else{
                     $arr_errors["$key"] = "$key n'est pas valide";
+                    $is_form_valid = false;
                 }
             }
-            foreach($sanitized_form as $key => $value){
-                echo '<pre>';
-                echo $value;
+            if($is_form_valid){
+                // Action to do if all validation step passed
+
             }
     } else {
         // à faire renvoyer page de "validation OK" pour le bot suite au honeypot
