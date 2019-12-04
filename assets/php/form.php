@@ -1,11 +1,7 @@
 <?php
-$firstName = $_POST['firstname'];
-$lastName = $_POST['lastname'];
-$gender = $_POST['gender'];
-$email = $_POST['email'];
-$country = $_POST['country'];
-$message = $_POST['message'];
-$honeyPot = $_POST['telephone'];
+echo '<pre>';
+print_r($_POST);
+echo gettype($_POST['model']);
 
 
 
@@ -28,8 +24,14 @@ function form_processing(){
     echo print_r($sanitized_form);
     // Si $_POST['model'] est un honeypot
     // Si rempli: ne rien faire
-    if( 1 ){
-        // Sanitizer
+    if($sanitized_form['model'] == ""){
+        
+        // Validation
+        
+
+
+    } else {
+        // à faire renvoyer page de "validation OK" pour le bot suite au honeypot
         
     }
 }
