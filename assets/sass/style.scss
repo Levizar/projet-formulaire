@@ -30,6 +30,15 @@ body {
 
   .bg-color {
     background-color: $primaryColor;
+    color:$linkColor;
+  }
+
+  .bg-color:disabled{
+    opacity:0.3;
+    cursor: not-allowed;
+    &:hover{
+      color:$linkColor;
+    }
   }
 
   nav {
@@ -94,7 +103,10 @@ body {
 }
 
 form>div#sacamerde{
-  position:absolute;
-  top:0;
+  position:absolute !important;
+  bottom:0 !important;
+  left:-1000 !important;
   opacity : 0;
+  height:0;
+  width:0 !important;
 }

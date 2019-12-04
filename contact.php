@@ -12,12 +12,12 @@ include 'assets/php/header.php';?>
     <form method="POST" action="assets/php/form.php">
         <div class="form-row my-3">
             <div class="col">
-                <label for="firstname">Prénom :</label>
-                <input type="text" class="form-control" placeholder="Votre prénom" name="firstname">
+                <label for="firstname">Prénom : <span style="color:#cc992b">*</span></label>
+                <input type="text" class="form-control" placeholder="Votre prénom" name="firstname" id="firstname" required max-length="20">
             </div>
             <div class="col">
-            <label for="lastname">Nom :</label>
-            <input type="text" class="form-control" placeholder="Votre nom" name="lastname">
+            <label for="lastname">Nom : <span style="color:#cc992b">*</span></label>
+            <input type="text" class="form-control" placeholder="Votre nom" name="lastname" id="lastname" required max-length="20">
             </div>
         </div>
 
@@ -47,15 +47,16 @@ include 'assets/php/header.php';?>
       
         <div class="form-row my-3">
             <div class="col">
-                <label for="email">E-mail :</label>
-                <input type="mail" class="form-control" placeholder="Votre e-mail" name="email">
+                <label for="email">E-mail : <span style="color:#cc992b">*</span></label>
+                <input type="mail" class="form-control" placeholder="Votre e-mail" name="email" id="email" required>
             </div>
         </div>
 
         <div class="form-row my-3">
             <div class="col">
-                <label for="country">Pays :</label>
-                <select id="country" name="country" class="form-control">
+                <label for="country">Pays : <span style="color:#cc992b">*</span></label>
+                <select id="country" name="country" class="form-control" id="country" required>
+                    <option value="other">Selectionnez votre pays</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -307,8 +308,8 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="subject">Sujet :</label>
-                <select class="form-control">
-                    <option value="other" selected>Choisissez le sujet de votre message...</option>
+                <select class="form-control" id="subject" required>
+                    <option value="other" selected>Choisissez le sujet de votre message</option>
                     <option value="question">J'ai une question à propos d'un produit</option>
                     <option value="reclamation">J'ai une problème avec un produit</option>
                     <option value="buy">Je souhaiterais commander un produit</option>
@@ -318,25 +319,27 @@ include 'assets/php/header.php';?>
 
         <div class="form-row my-3">
             <div class="col">
-                <label for="message">Message :</label>
-                <textarea class="form-control" placeholder="Votre message" name="message"></textarea>
+                <label for="message">Message : <span style="color:#cc992b">*</span></label>
+                <textarea class="form-control" placeholder="Votre message" name="message" id="message" required></textarea>
             </div>
         </div>
 
         <!-- HONEY POT -->
             <div class="col sacamerde" id="sacamerde">
-                <label for="telephone">Modèle</label>
-                <input type="text" class="form-control" placeholder="Votre n° de téléphone" name="model" autocomplete="off">
+                <label for="model">Modèle</label>
+                <input type="text" class="form-control" placeholder="Modèle de votre raspberry" name="model" autocomplete="off">
             </div>
         <!-- FIN DU HONEY POT -->
 
-        <input type="submit" value="Envoyer" class="mb-5">            
+        <div class="d-flex flex-column flex-md-row justify-content-end">
+            <p id="formError" style="color:red;"></p>
+            <input type="submit" value="Envoyer" class="btn bg-color mb-5 ml-3" id="submit" >
+        </div>
     </form>
 </div>
 
 
-<?php print_r($_POST); ?>
-
+<script src="assets/js/formValidate.js"></script>
 
 <!----------- Footer (with end tags) ----------->
 

@@ -29,6 +29,16 @@ body {
 
 body .bg-color {
   background-color: #15c5bd;
+  color: #FFF;
+}
+
+body .bg-color:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+body .bg-color:disabled:hover {
+  color: #FFF;
 }
 
 body nav a {
@@ -86,8 +96,11 @@ body footer ul li .fab:hover {
 }
 
 form > div#sacamerde {
-  position: absolute;
-  top: 0;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: -1000 !important;
   opacity: 0;
+  height: 0;
+  width: 0 !important;
 }
 /*# sourceMappingURL=style.css.map */
