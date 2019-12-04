@@ -25,7 +25,7 @@ include 'assets/php/header.php';?>
             <legend class="col-form-label col-sm-2 pt-0">Genre :</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="Homme" checked>
+                    <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="Homme">
                     <label class="form-check-label" for="gridRadios1">
                         Homme
                     </label>

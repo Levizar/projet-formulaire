@@ -1,7 +1,11 @@
 <?php
-echo '<pre>';
-print_r($_POST);
-echo gettype($_POST['model']);
+$firstName = $_POST['firstname'];
+$lastName = $_POST['lastname'];
+$gender = $_POST['gender'];
+$email = $_POST['email'];
+$country = $_POST['country'];
+$message = $_POST['message'];
+$honeyPot = $_POST['telephone'];
 
 
 
@@ -26,9 +30,7 @@ function form_processing(){
     // Si rempli: ne rien faire
     if( 1 ){
         // Sanitizer
-
-    } else {
-        // à faire renvoyer page de "validation OK" pour le bot suite au honeypot
+        
     }
 }
 
