@@ -6,7 +6,7 @@ echo gettype($_POST['model']);
 
 
 // $data is $_POST
-function form($form_input){
+function form_processing(){
     // List of filters
     $arr_filters = array
     (
@@ -19,12 +19,13 @@ function form($form_input){
         [model] => FILTER_SANITIZE_STRING
     );
 
+    // Sanitization du formulaire avant opération
+    $sanitized_form = filter_input_array(INPUT_POST, $arr_filters);
+    echo print_r($sanitized_form);
     // Si $_POST['model'] est un honeypot
     // Si rempli: ne rien faire
-    if(!isset($_POST['model'])){
+    if($_POST['model'] != ''){
         // Sanitizer
-        $sanitized_form = filter_input_array(INPUT_POST, $arr_filters);
-        echo print_r($sanitized_form);
 
     } else {
         // à faire renvoyer page de "validation OK" pour le bot suite au honeypot
