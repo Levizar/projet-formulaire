@@ -13,11 +13,11 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="firstname">Prénom :</label>
-                <input type="text" class="form-control" placeholder="Votre prénom" name="firstname">
+                <input type="text" class="form-control" placeholder="Votre prénom" name="firstname" id="firstname">
             </div>
             <div class="col">
             <label for="lastname">Nom :</label>
-            <input type="text" class="form-control" placeholder="Votre nom" name="lastname">
+            <input type="text" class="form-control" placeholder="Votre nom" name="lastname" id="lastname">
             </div>
         </div>
 
@@ -48,14 +48,15 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="email">E-mail :</label>
-                <input type="mail" class="form-control" placeholder="Votre e-mail" name="email">
+                <input type="mail" class="form-control" placeholder="Votre e-mail" name="email" id="email">
             </div>
         </div>
 
         <div class="form-row my-3">
             <div class="col">
                 <label for="country">Pays :</label>
-                <select id="country" name="country" class="form-control">
+                <select id="country" name="country" class="form-control" id="country">
+                    <option value="other">Selectionnez votre pays</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -307,8 +308,8 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="subject">Sujet :</label>
-                <select class="form-control">
-                    <option value="other" selected>Choisissez le sujet de votre message...</option>
+                <select class="form-control" id="subject">
+                    <option value="other" selected>Choisissez le sujet de votre message</option>
                     <option value="question">J'ai une question à propos d'un produit</option>
                     <option value="reclamation">J'ai une problème avec un produit</option>
                     <option value="buy">Je souhaiterais commander un produit</option>
