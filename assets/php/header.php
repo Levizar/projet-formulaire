@@ -10,7 +10,6 @@
     <script src="https://kit.fontawesome.com/b534382f55.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Ajout de php dans le titre pour changer le titre de la page -->
     <title>Hackers poulette <?php switch ($page) {
         case 'accueil':
             echo 'accueil';
@@ -27,11 +26,8 @@
 </head>
 
 
-<!--  Remplacement de tous les md par sm car suffisant avant expand -->
 <body>
-    <!-- Remplacement lg par sm pour expand plus tôt car assez de place -->
     <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-color mb-2">
-    <!-- Doublé le navbar-brand : la class d-sm-none le fait disparaitre lors de l'expand -->
         <a class="navbar-brand text-center d-sm-none font-weight-bolder" href="index.php">Hackers Poulette</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,9 +41,6 @@
                 <li class="nav-item col-2 <?php if($page == "products") echo " active";?>">
                     <a class="nav-link" href="products.php">Produits</a>
                 </li>
-                <!-- Retrait de la classe col-0 car inutile (ne change rien) -->
-                <!-- Ajout d-none pour ne pas display lors de la version mobile -->
-                <!-- Ajout d-sm-inline-block pour display lors de l'expand -->
                 <li class="navbar-brand col-4 text-center d-none d-sm-inline-block">
                     <a class="font-weight-bolder" href="index.php">Hackers Poulette</a>
                 </li>

@@ -68,6 +68,11 @@ function form_processing(){
             }
             if($is_form_valid){
                 // Action to do if all validation step passed
+                
+            } else {
+                // if the form isn't valid
+                // Send back users to the form
+
 
             }
     } else {

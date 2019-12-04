@@ -1,12 +1,7 @@
     <footer class="py-1 mt-5">
         <ul class="row container-fluid ml-0 mb-0 justify-content-around">
-        <!-- rempalcement des col-1 par col-sm-1 pour préserver la version pc -->
-        <!-- ajout de col-4 pour avoir plusieurs lignes en mobile -->
-        <!-- Retrait de trip advisor: non pertinent -->
             <li class="col-2 col-sm-2 text-center"><a href=""><i class="fab fa-facebook-square fa-lg"></i></a></li>
             <li class="col-2 col-sm-2 text-center"><a href=""><i class="fab fa-instagram fa-lg"></i></a></li>
-            <!-- Remplacement text-center par text-sm-center pour préserver version pc -->
-            <!-- Ajout de text-right/left + mr/ml-5 pour centrer sur 2eme ligne -->
             <li class="col-2 col-sm-2 text-center"><a href=""><i class="fab fa-twitter-square fa-lg"></i></a></li>
             <li class="col-2 col-sm-2 mr-sm-0 text-center"><a href=""><i class="fab fa-jedi-order fa-lg"></i></a></li>
             <li class="col-12 col-sm-4 ml-sm-0 text-center text-sm-right">© 2019 Hackers Poulette</li>

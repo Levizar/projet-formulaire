@@ -1,13 +1,10 @@
 // Variables
-//Changement des noms de variable pour coller aux normes
-// (si jamais le client veut changer de couleur, ces noms n'ont plus de sens)
 $primaryColor : #15c5bd;
 $secondaryColor : #303030;
-// remplacement des whites histoire d'être totalement cohérent. (et de pouvoir changer facilement après)
 $linkColor: #FFF;
 
 
-// Import de police
+// font import
 @font-face {
   font-family: 'bellota';
   src: url('../fonts/Bellota-Regular-webfont.woff') format('woff');
@@ -81,7 +78,6 @@ body {
 
 
   footer {
-    // Retrait du -webkit- car le live sass le rajoute tout seul dans le fichier final
     position: sticky;
     top: 0px;
     background-color: $primaryColor;
