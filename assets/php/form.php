@@ -10,13 +10,13 @@ function form_processing(){
     // List of filters
     $arr_filters = array
     (
-        [firstname] => FILTER_SANITIZE_STRING,
-        [lastname] => FILTER_SANITIZE_STRING,
-        [gender] => FILTER_SANITIZE_STRING,
-        [email] => FILTER_VALIDATE_EMAIL,
-        [country] => FILTER_SANITIZE_STRING,
-        [message] => FILTER_SANITIZE_STRING,
-        [model] => FILTER_SANITIZE_STRING
+        'firstname' => FILTER_SANITIZE_STRING,
+        'lastname' => FILTER_SANITIZE_STRING,
+        'gender' => FILTER_SANITIZE_STRING,
+        'email' => FILTER_VALIDATE_EMAIL,
+        'country' => FILTER_SANITIZE_STRING,
+        'message' => FILTER_SANITIZE_STRING,
+        'model' => FILTER_SANITIZE_STRING
     );
 
     // Sanitization du formulaire avant opération
@@ -24,10 +24,12 @@ function form_processing(){
     echo print_r($sanitized_form);
     // Si $_POST['model'] est un honeypot
     // Si rempli: ne rien faire
-    if($_POST['model'] != ''){
+    if( 1 ){
         // Sanitizer
 
     } else {
         // à faire renvoyer page de "validation OK" pour le bot suite au honeypot
     }
 }
+
+form_processing();
