@@ -94,7 +94,10 @@ body {
 }
 
 form>div#sacamerde{
-  position:absolute;
-  top:0;
+  position:absolute !important;
+  bottom:0 !important;
+  left:-1000 !important;
   opacity : 0;
+  height:0;
+  width:0 !important;
 }
