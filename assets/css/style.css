@@ -60,6 +60,8 @@ body .btn.btn-primary.bg-color {
 
 body .btn.btn-primary.bg-color:hover {
   background-color: #303030;
+  border-color: #303030;
+  color: #15c5bd;
 }
 
 body footer {
