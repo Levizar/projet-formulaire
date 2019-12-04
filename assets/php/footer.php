@@ -1,4 +1,4 @@
-    <footer class="py-1">
+    <footer class="py-1 mt-5">
         <ul class="row container-fluid ml-0 mb-0 justify-content-around">
         <!-- rempalcement des col-1 par col-sm-1 pour préserver la version pc -->
         <!-- ajout de col-4 pour avoir plusieurs lignes en mobile -->

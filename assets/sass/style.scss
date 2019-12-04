@@ -61,10 +61,14 @@ body {
   .btn.btn-primary.bg-color{
     background-color: $primaryColor;
     border-color: $primaryColor;
+
     &:hover{
       background-color: $secondaryColor;
+      border-color: $secondaryColor;
+      color : $primaryColor;
     }
   }
+
 
 
   footer {
