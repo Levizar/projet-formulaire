@@ -331,15 +331,15 @@ include 'assets/php/header.php';?>
             </div>
         <!-- FIN DU HONEY POT -->
 
-        <div class="d-flex justify-content-end">
-            <p id="formError"></p>
-            <input type="submit" value="Envoyer" class="mb-5 ml-3" id="submit" >
+        <div class="d-flex flex-column flex-md-row justify-content-end">
+            <p id="formError" style="color:red;"></p>
+            <input type="submit" value="Envoyer" class="btn bg-color mb-5 ml-3" id="submit" >
         </div>
     </form>
 </div>
 
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/formValidate.js"></script>
 
 <!----------- Footer (with end tags) ----------->
 

@@ -30,6 +30,15 @@ body {
 
   .bg-color {
     background-color: $primaryColor;
+    color:$linkColor;
+  }
+
+  .bg-color:disabled{
+    opacity:0.3;
+    cursor: not-allowed;
+    &:hover{
+      color:$linkColor;
+    }
   }
 
   nav {

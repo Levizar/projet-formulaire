@@ -29,6 +29,16 @@ body {
 
 body .bg-color {
   background-color: #15c5bd;
+  color: #FFF;
+}
+
+body .bg-color:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+body .bg-color:disabled:hover {
+  color: #FFF;
 }
 
 body nav a {
