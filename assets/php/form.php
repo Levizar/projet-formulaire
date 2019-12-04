@@ -1,12 +1,5 @@
 <?php
-// Test sans sanitize
-// echo '<pre>';
-// print_r($_POST);
-// echo gettype($_POST['model']);
 
-
-
-// $data is $_POST
 function form_processing(){
     // List of filters
     $arr_sanitizers = [
@@ -19,6 +12,7 @@ function form_processing(){
         'model' => FILTER_SANITIZE_STRING
     ];
 
+    // List of validaters
     $arr_filters_validers = [
         'firstname' => FILTER_VALIDATE_REGEXP,
         'lastname' => FILTER_VALIDATE_REGEXP,
@@ -29,6 +23,7 @@ function form_processing(){
         'model' => FILTER_VALIDATE_REGEXP 
     ];
     
+    // List of regexp for the validaters
     $arr_regexp_validers = [
         'firstname' => '/[\w-]{2,20}/',
         'lastname' => '/[\w-]{2,30}/',
@@ -36,29 +31,42 @@ function form_processing(){
         // 'email' => '/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/', not used beause filter_validate_email
         'country' => '/[\w-]{2,30}/',
         'message' => '/[\w\W]+/',
-        'model' => '/[\w\W]+/', 
+        'model' => '//', 
     ];
 
-    // Sanitization du formulaire avant opération
+    $arr_errors = [
+        'firstname' => null,
+        'lastname' => null,
+        'gender' => null,
+        'email' => null,
+        'country' => null,
+        'message' => null,
+        'model' => null 
+    ];
+
+    // Sanitization of the form anwser before any operation
     $sanitized_form = filter_input_array(INPUT_POST, $arr_sanitizers);
     
-    // Si $_POST['model'] est un honeypot
-    // Si rempli: ne rien faire
+    // Checking if the honeypot is still intact
     if($sanitized_form['model'] == ""){
-        // Test après sanitize après honeypot
 
         // Validation
         foreach($sanitized_form as $key => $value){
+            // Erasing space before and after the answers
+            $sanitized_form["$key"] = trim($value);
             if( filter_var(
                 $value, 
                 $arr_filters_validers["$key"],
                 array("options" => array("regexp" => $arr_regexp_validers["$key"]))
                 )){
-
+                }else{
+                    $arr_errors["$key"] = "$key n'est pas valide";
+                }
+            }
+            foreach($sanitized_form as $key => $value){
                 echo '<pre>';
                 echo $value;
             }
-        }
     } else {
         // à faire renvoyer page de "validation OK" pour le bot suite au honeypot
         
