@@ -9,7 +9,7 @@ include 'assets/php/header.php';?>
 <div class="container col-10 col-md-8 col-lg-6 ">
     <h1 class="text-center my-5">Contactez-nous</h1>
     
-    <form method="POST">
+    <form method="POST" action="assets/php/form.php">
         <div class="form-row my-3">
             <div class="col">
                 <label for="firstname">Prénom :</label>
@@ -325,8 +325,8 @@ include 'assets/php/header.php';?>
 
         <!-- HONEY POT -->
             <div class="col sacamerde" id="sacamerde">
-                <label for="telephone">Téléphone</label>
-                <input type="numbers" class="form-control" placeholder="Votre n° de téléphone" name="telephone">
+                <label for="telephone">Modèle</label>
+                <input type="text" class="form-control" placeholder="Votre n° de téléphone" name="model" autocomplete="off">
             </div>
         <!-- FIN DU HONEY POT -->
 
@@ -334,7 +334,8 @@ include 'assets/php/header.php';?>
     </form>
 </div>
 
-<?php include 'assets/php/form.php';?>
+
+<?php print_r($_POST); ?>
 
 
 <!----------- Footer (with end tags) ----------->
