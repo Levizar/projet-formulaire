@@ -22,6 +22,27 @@ if(firstname.value == '' || lastname.value == '' || email.value == '' || message
     submit.disabled = "true";
 }
 
+window.addEventListener("load", ()=>{
+    if(firstname.value != ''){
+        firstnameOk = true;
+    }
+    if(lastname.value != ''){
+        lastnameOk = true;
+    }
+    if(email.value != ''){
+        emailOk = true;
+    }
+    if(country.value != 'other'){
+        countryOk = true;
+    }
+    if(message.value != ''){
+        messageOk = true;
+    }
+    if(man.checked || woman.checked || otherGender.checked){
+        genderOk = true;
+    }
+})
+
 firstname.addEventListener('input',()=>{
     let regEx = RegExp(/[1-9]/);
     if(regEx.test(firstname.value)){
