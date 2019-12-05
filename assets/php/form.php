@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // thx to stackoverflow
 function redirect($url)
@@ -75,8 +76,6 @@ function form_processing()
                 array("options" => array("regexp" => $arr_regexp_validers["$key"]))
             )){
                 $arr_errors["$key"] = "$key n'est pas valide";
-                echo '<pre>';
-                print_r($arr_errors);
                 $is_form_valid = false;
             }
         }
@@ -88,9 +87,16 @@ function form_processing()
             redirect("../../valid-form.php");
             
         } else {
-            echo 'going to NOT valid';
+            // echo 'going to NOT valid';
             // if the form isn't valid
             // Send back users to the form
+            $_SESSION["sanitized_form"] = $sanitized_form;
+            $_SESSION["arr_errors"] = $arr_errors;
+
+            // echo "<pre>";
+            // print_r($_SESSION["sanitized_form"]);
+            // print_r($_SESSION["arr_errors"]);
+            
             redirect("../../contact.php");
 
             

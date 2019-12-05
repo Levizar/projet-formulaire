@@ -1,5 +1,10 @@
 <?php
+session_start();
 $page = "contact";
+// Session saved variable
+$sanitized_form = $_SESSION["sanitized_form"];
+$arr_errors = $_SESSION["arr_errors"];
+
 
 // <!----------- Header (with head an body tags) ----------->
 
@@ -13,7 +18,7 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="firstname">Prénom : <span style="color:#cc992b">*</span></label>
-                <input type="text" class="form-control" placeholder="Votre prénom" name="firstname" id="firstname" required max-length="20">
+                <input type="text" class="form-control" placeholder="Votre prénom" name="firstname" id="firstname" value="<?php if($firstname != ""){echo $firstname;} ?>" required max-length="20">
             </div>
             <div class="col">
             <label for="lastname">Nom : <span style="color:#cc992b">*</span></label>
