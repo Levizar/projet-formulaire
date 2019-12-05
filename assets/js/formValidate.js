@@ -1,3 +1,4 @@
+let form = document.getElementById("form");
 let firstname = document.getElementById('firstname');
 let lastname = document.getElementById('lastname');
 let email = document.getElementById('email');
@@ -5,6 +6,7 @@ let country = document.getElementById('country');
 let message = document.getElementById('message');
 let submit = document.getElementById('submit');
 let formError = document.getElementById('formError');
+let radios = document.getElementById('radios');
 let man = document.getElementById("Homme");
 let woman = document.getElementById("Femme");
 let otherGender = document.getElementById("Autre");
@@ -19,7 +21,13 @@ let countryOk = false;
 let messageOk = false;
 
 window.addEventListener("load", ()=>{
-    submit.disabled = "true";
+    firstnameOk = false;
+    lastnameOk = false;
+    genderOk = false;
+    emailOk = false;
+    countryOk = false;
+    messageOk = false;
+
     if(firstname.value != ''){
         firstnameOk = true;
     }
@@ -40,7 +48,7 @@ window.addEventListener("load", ()=>{
     }
 })
 
-firstname.addEventListener('input',()=>{
+const checkFirstName = (checkEmpty = false) => {
     let regEx = RegExp(/[1-9]/);
     if(regEx.test(firstname.value)){
         firstname.style.backgroundColor = "rgba(207, 85, 83,0.3)";
@@ -48,15 +56,18 @@ firstname.addEventListener('input',()=>{
         firstnameOk = false;
     }else if(firstname.value == ''){
         firstnameOk = false;
+        if(checkEmpty == true){
+            firstname.style.backgroundColor = "rgba(207, 85, 83,0.3)";
+            firstname.style.borderColor = 'rgba(207, 85, 83,0.9)';
+        }
     }else{
         firstname.style.backgroundColor = 'inherit';
         firstname.style.borderColor = initBorderColor;
         firstnameOk = true;
-    }
-    enableButton();
-});
+    }}
 
-lastname.addEventListener('input',()=>{
+
+const checkLastName = (checkEmpty = false) => {
     let regEx = RegExp(/[1-9]/);
     if(regEx.test(lastname.value)){
         lastname.style.backgroundColor = "rgba(207, 85, 83,0.3)";
@@ -64,15 +75,18 @@ lastname.addEventListener('input',()=>{
         lastnameOk = false;
     }else if(lastname.value == ''){
         lastnameOk = false;
+        if(checkEmpty == true){
+            lastname.style.backgroundColor = "rgba(207, 85, 83,0.3)";
+            lastname.style.borderColor = 'rgba(207, 85, 83,0.9)';
+        }
     }else{
         lastname.style.backgroundColor = 'inherit';
         lastname.style.borderColor = initBorderColor;
         lastnameOk = true;
     }
-    enableButton();
-});
+}
 
-email.addEventListener('input',()=>{
+const checkEmail = (checkEmpty = false) => {
     let regEx = RegExp( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     if(!regEx.test(email.value) && email.value != ''){
         email.style.backgroundColor = "rgba(207, 85, 83,0.3)";
@@ -80,57 +94,106 @@ email.addEventListener('input',()=>{
         emailOk = false;
     }else if(email.value == ''){
         emailOk = false;
+        if(checkEmpty == true){
+            email.style.backgroundColor = "rgba(207, 85, 83,0.3)";
+            email.style.borderColor = 'rgba(207, 85, 83,0.9)';
+        }
     }else{
         email.style.backgroundColor = 'inherit';
         email.style.borderColor = initBorderColor;
         emailOk = true;
     }
-    enableButton();
-});
+}
 
-country.addEventListener('input',()=>{
+const checkCountry = (checkEmpty = false) => {
     if(country.value == 'other'){
         countryOk = false;
+        if(checkEmpty){
+            country.style.backgroundColor = "rgba(207, 85, 83,0.3)";
+            country.style.borderColor = 'rgba(207, 85, 83,0.9)';
+        }
     }else{
         countryOk = true;
+        country.style.backgroundColor = 'inherit';
+        country.style.borderColor = initBorderColor;
     }
-    enableButton();
-});
+}
 
-message.addEventListener('input',()=>{
+const checkMessage = (checkEmpty = false) => {
     if(message.value == ''){
-        message.style.backgroundColor = "rgba(207, 85, 83,0.3)";
-        message.style.borderColor = 'rgba(207, 85, 83,0.9)';
+        if(checkEmpty){
+            message.style.backgroundColor = "rgba(207, 85, 83,0.3)";
+            message.style.borderColor = 'rgba(207, 85, 83,0.9)';
+        }
         messageOk = false;
     }else{
         message.style.backgroundColor = 'inherit';
         message.style.borderColor = initBorderColor;
         messageOk = true;
     }
-    enableButton();
+}
+
+
+
+firstname.addEventListener('input',()=>{
+    checkFirstName();
+    checkAndSubmit();
 });
 
-man.addEventListener("click",()=>{
+lastname.addEventListener('input',()=>{
+    checkLastName();
+    checkAndSubmit();
+});
+
+Array.from(document.querySelectorAll(".gender")).forEach(gender => gender.addEventListener("click", ()=>{
+    radios.style.backgroundColor = 'transparent';
+    radios.style.borderColor = 'transparent';
     genderOk = true;
-    enableButton();
-})
-woman.addEventListener("click",()=>{
-    genderOk = true;
-    enableButton();
-})
-otherGender.addEventListener("click",()=>{
-    genderOk = true;
-    enableButton();
-})
+    checkAndSubmit();
+}))
+
+email.addEventListener('input',()=>{
+    checkEmail();
+    checkAndSubmit();
+});
+
+country.addEventListener('input',()=>{
+   checkCountry();
+   checkAndSubmit();
+});
+
+message.addEventListener('input',()=>{
+    checkMessage();
+    checkAndSubmit();
+});
 
 
-function enableButton(){
+
+function checkAndSubmit(checkSubmit=false){
     if(firstnameOk && lastnameOk && emailOk && messageOk && countryOk && genderOk){
-        submit.disabled = "";
         formError.innerHTML = "";
+        if(checkSubmit == true) form.submit();
 
-    }else{
-        submit.disabled = "true";
+    }else if (checkSubmit) {
         formError.innerHTML = '<i class="fas fa-exclamation-circle"></i> Un ou plusieurs champs sont vides ou incorrects.'
     }
 }
+
+
+
+submit.addEventListener("click", ()=>{
+
+    if(man.checked || woman.checked || otherGender.checked){
+        genderOk = true;
+    }else{
+        radios.style.backgroundColor = 'rgba(207, 85, 83,0.3)';
+        radios.style.border = '1px solid rgba(207, 85, 83,0.9)';
+        genderOk = false;
+    }
+    checkFirstName(true);
+    checkLastName(true);
+    checkEmail(true);
+    checkCountry(true);
+    checkMessage(true);
+    checkAndSubmit(true);
+})
