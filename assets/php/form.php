@@ -1,10 +1,10 @@
 <?php
 
 // thx to stackoverflow
-function redirect($url)
+function redirect($relative_url)
 {
     ob_start();
-    header('Location: ' . $url);
+    header('Location: http://' . $_SERVER['HTTP_HOST'] . $relative_url);
     ob_end_flush();
     exit();
 }
@@ -85,10 +85,10 @@ function form_processing()
             
             
             // redirection to the valid send page if everything went good
-            redirect("../../valid-form.php");
+            redirect("/projet-formulaire/valid-form.php");
             
         } else {
-            echo 'going to NOT valid';
+            // echo 'going to NOT valid';
             // if the form isn't valid
             // Send back users to the form
             redirect("../../contact.php");
