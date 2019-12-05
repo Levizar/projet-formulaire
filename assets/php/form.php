@@ -73,11 +73,11 @@ function form_processing()
             // Erasing space char before and after the answers
             $sanitized_form["$key"] = trim($value);
             // If the data aren't validate, prepare an error message for rejection
-            if (! filter_var(
+            if (!filter_var(
                 $value,
                 $arr_filters_validers["$key"],
                 array("options" => array("regexp" => $arr_regexp_validers["$key"]))
-            )){
+            )) {
                 $arr_errors["$key"] = "$key n'est pas valide";
                 $is_form_valid = false;
             }
@@ -86,17 +86,16 @@ function form_processing()
             // Action to do if all validation step passed
 
             // TO DO: SEND THE EMAIL
-            
 
             // redirection to the valid send page if everything went good
             redirect("../../valid-form.php");
-            
+
         } else {
             // if the form isn't valid
             // Send back users to the form
             $_SESSION["sanitized_form"] = $sanitized_form;
-            $_SESSION["arr_errors"] = $arr_errors;            
-            redirect("../../contact.php");            
+            $_SESSION["arr_errors"] = $arr_errors;
+            redirect("../../contact.php");
         }
     } else {
         // Honey Pot was taken thus we redirect to the valid-form page
