@@ -29,6 +29,7 @@
 <body>
     <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-color mb-2">
         <a class="navbar-brand text-center d-sm-none font-weight-bolder" href="index.php">Hackers Poulette</a>
+	    <link rel="icon" href="assets/img/favicon.ico" type="image/png"/>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
