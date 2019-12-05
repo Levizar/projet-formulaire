@@ -325,7 +325,7 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="message">Message : <span style="color:#cc992b">*</span></label>
-                <textarea class="form-control" placeholder="Votre message" name="message" id="message" required>value="<?php if($sanitized_form["message"] != ""){echo $sanitized_form["message"];} ?>"</textarea>
+                <textarea class="form-control" placeholder="Votre message" name="message" id="message" required><?php if($sanitized_form["message"] != ""){echo $sanitized_form["message"];} ?>"</textarea>
             </div>
         </div>
 
@@ -338,7 +338,7 @@ include 'assets/php/header.php';?>
 
         <div class="d-flex flex-column flex-md-row justify-content-end">
             <p id="formError" style="color:red"></p>
-            <input type="submit" value="Envoyer" class="btn bg-color mb-5 ml-3" id="submit" >
+            <input type="submit" value="Envoyer" class="btn bg-color mb-5 ml-3" id="submit">
         </div>
     </form>
 </div>
