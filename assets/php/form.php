@@ -56,7 +56,6 @@ function form_processing()
         'country' => null,
         'subject' => null,
         'message' => null,
-        // 'model' => null
     ];
 
     // Sanitization of the form anwser before any operation
@@ -85,28 +84,19 @@ function form_processing()
         }
         if ($is_form_valid) {
             // Action to do if all validation step passed
+
+            // TO DO: SEND THE EMAIL
             
-            
+
             // redirection to the valid send page if everything went good
             redirect("../../valid-form.php");
             
         } else {
-            // echo 'going to NOT valid';
             // if the form isn't valid
             // Send back users to the form
             $_SESSION["sanitized_form"] = $sanitized_form;
-            $_SESSION["arr_errors"] = $arr_errors;
-
-            // echo "<pre>";
-            // print_r($_SESSION["sanitized_form"]);
-            // print_r($_SESSION["arr_errors"]);
-            
-            redirect("../../contact.php");
-
-            
-
-
-            
+            $_SESSION["arr_errors"] = $arr_errors;            
+            redirect("../../contact.php");            
         }
     } else {
         // Honey Pot was taken thus we redirect to the valid-form page
