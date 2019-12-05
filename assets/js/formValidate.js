@@ -18,11 +18,8 @@ let emailOk = false;
 let countryOk = false;
 let messageOk = false;
 
-if(firstname.value == '' || lastname.value == '' || email.value == '' || message.value == ''){
-    submit.disabled = "true";
-}
-
 window.addEventListener("load", ()=>{
+    submit.disabled = "true";
     if(firstname.value != ''){
         firstnameOk = true;
     }
