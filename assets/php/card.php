@@ -2,7 +2,7 @@
 
 function generate_card($img_file_name, $title, $content, $link = "#"){
 
-echo    "<div class='card col-12 col-sm-5 col-lg-3 m-3 p-0''>
+echo    "<div class='card col-12 col-sm-5 col-lg-3 m-3 p-0 shadow'>
             <img src='assets/img/$img_file_name' class='card-img-top' alt='$title'>
             <div class='card-body d-flex flex-column justify-content-between'>
                 <div>

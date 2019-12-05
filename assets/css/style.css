@@ -74,6 +74,16 @@ body .btn.btn-primary.bg-color:hover {
   color: #15c5bd;
 }
 
+body .card {
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+body .card:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
 body footer {
   position: -webkit-sticky;
   position: sticky;

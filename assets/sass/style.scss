@@ -75,6 +75,13 @@ body {
     }
   }
 
+  .card{
+    transition: 0.2s ease;
+    &:hover{
+      transform: scale(1.04);
+    }
+  }
+
 
 
   footer {

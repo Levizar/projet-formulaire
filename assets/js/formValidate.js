@@ -5,12 +5,17 @@ let country = document.getElementById('country');
 let message = document.getElementById('message');
 let submit = document.getElementById('submit');
 let formError = document.getElementById('formError');
+let man = document.getElementById("Homme");
+let woman = document.getElementById("Femme");
+let otherGender = document.getElementById("Autre");
 let initBorderColor = firstname.style.borderColor;
 
 
 let firstnameOk = false;
 let lastnameOk = false;
+let genderOk = false;
 let emailOk = false;
+let countryOk = false;
 let messageOk = false;
 
 if(firstname.value == '' || lastname.value == '' || email.value == '' || message.value == ''){
@@ -87,14 +92,27 @@ message.addEventListener('input',()=>{
     enableButton();
 });
 
+man.addEventListener("click",()=>{
+    genderOk = true;
+    enableButton();
+})
+woman.addEventListener("click",()=>{
+    genderOk = true;
+    enableButton();
+})
+otherGender.addEventListener("click",()=>{
+    genderOk = true;
+    enableButton();
+})
+
 
 function enableButton(){
-    if(firstnameOk && lastnameOk && emailOk && messageOk && countryOk){
+    if(firstnameOk && lastnameOk && emailOk && messageOk && countryOk && genderOk){
         submit.disabled = "";
         formError.innerHTML = "";
 
     }else{
         submit.disabled = "true";
-        formError.innerHTML = '<i class="fas fa-exclamation-circle"></i> Un ou plusieurs champs sont vide ou incorrects.'
+        formError.innerHTML = '<i class="fas fa-exclamation-circle"></i> Un ou plusieurs champs sont vides ou incorrects.'
     }
 }

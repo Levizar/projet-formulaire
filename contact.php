@@ -30,21 +30,21 @@ include 'assets/php/header.php';?>
             <legend class="col-form-label col-sm-2 pt-0">Genre :</legend>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="gridRadios1" value="Homme">
+                    <input class="form-check-input" type="radio" name="gender" id="Homme" value="Homme">
                     <label class="form-check-label" for="gridRadios1">
                         Homme
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="Femme">
+                    <input class="form-check-input" type="radio" name="gender" id="Femme" value="Femme">
                     <label class="form-check-label" for="gridRadios2">
                         Femme
                     </label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="gender" id="gridRadios2" value="Non-binaire">
-                    <label class="form-check-label" for="gridRadios2">
-                        Non-binaire
+                    <input class="form-check-input" type="radio" name="gender" id="Autre" value="Autre">
+                    <label class="form-check-label" for="gridRadios3">
+                        Autre
                     </label>
                 </div>
             </div>
