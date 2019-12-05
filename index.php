@@ -13,6 +13,6 @@ include 'assets/php/header.php';?>
         <a class="btn btn-primary btn-lg bg-color" href="contact.php" role="button">Vers le formulaire et le back-end !</a>
     </div>
     
-<!----------- Footer (with end tags) ----------->
+<!-- --------- Footer (with end tags) --------- -->
 
 <?php include 'assets/php/footer.php';?> 

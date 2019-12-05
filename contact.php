@@ -107,6 +107,6 @@ include 'assets/php/generation_functions.php';?>
 
 <script src="assets/js/formValidate.js"></script>
 
-<!----------- Footer (with end tags) ----------->
+<!-- --------- Footer (with end tags) --------- -->
 
 <?php include 'assets/php/footer.php';?> 
