@@ -19,6 +19,7 @@ function form_processing()
         'gender' => FILTER_SANITIZE_STRING,
         'email' => FILTER_SANITIZE_EMAIL,
         'country' => FILTER_SANITIZE_STRING,
+        'subject' => FILTER_SANITIZE_STRING,
         'message' => FILTER_SANITIZE_STRING,
         'model' => FILTER_SANITIZE_STRING,
     ];
@@ -30,6 +31,7 @@ function form_processing()
         'gender' => FILTER_VALIDATE_REGEXP,
         'email' => FILTER_VALIDATE_EMAIL,
         'country' => FILTER_VALIDATE_REGEXP,
+        'subject' => FILTER_VALIDATE_REGEXP,
         'message' => FILTER_VALIDATE_REGEXP,
         // 'model' => FILTER_VALIDATE_REGEXP
     ];
@@ -39,10 +41,11 @@ function form_processing()
         'firstname' => '/[\w-]{2,20}/',
         'lastname' => '/[\w-]{2,30}/',
         'gender' => '/Homme|Femme|Non-binaire/',
-        // 'email' => '/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/', not used beause filter_validate_email
+        'email' => '/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/',
         'country' => '/[\w-]{2,30}/',
+        'subject' => '/[\w -]{2,40}/',
         'message' => '/[\w\W]+/',
-        // 'model' => '//',
+        // 'model' => '//',       // Not used because honey pot deleted at the beginning
     ];
 
     $arr_errors = [
@@ -51,6 +54,7 @@ function form_processing()
         'gender' => null,
         'email' => null,
         'country' => null,
+        'subject' => null,
         'message' => null,
         // 'model' => null
     ];

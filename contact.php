@@ -1,9 +1,9 @@
 <?php
 session_start();
 $page = "contact";
-// Session saved variable
-$sanitized_form = $_SESSION["sanitized_form"];
-$arr_errors = $_SESSION["arr_errors"];
+// If session saved variable -> initializing variable to use
+if(isset($_SESSION["sanitized_form"])) $sanitized_form = $_SESSION["sanitized_form"];
+if(isset($_SESSION["arr_errors"])) $arr_errors = $_SESSION["arr_errors"];
 
 
 // <!----------- Header (with head an body tags) ----------->
@@ -18,11 +18,11 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="firstname">Prénom : <span style="color:#cc992b">*</span></label>
-                <input type="text" class="form-control" placeholder="Votre prénom" name="firstname" id="firstname" value="<?php if($firstname != ""){echo $firstname;} ?>" required max-length="20">
+                <input type="text" class="form-control" placeholder="Votre prénom" name="firstname" id="firstname" value="<?php if($sanitized_form["firstname"] != ""){echo $sanitized_form["firstname"];} ?>" required max-length="20">
             </div>
             <div class="col">
             <label for="lastname">Nom : <span style="color:#cc992b">*</span></label>
-            <input type="text" class="form-control" placeholder="Votre nom" name="lastname" id="lastname" required max-length="20">
+            <input type="text" class="form-control" placeholder="Votre nom" name="lastname" id="lastname" value="<?php if($sanitized_form["lastname"] != ""){echo $sanitized_form["lastname"];} ?>" required max-length="20">
             </div>
         </div>
 
@@ -53,14 +53,14 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="email">E-mail : <span style="color:#cc992b">*</span></label>
-                <input type="mail" class="form-control" placeholder="Votre e-mail" name="email" id="email" required>
+                <input type="mail" class="form-control" placeholder="Votre adresse e-mail" name="email" id="email" value="<?php if($sanitized_form["email"] != ""){echo $sanitized_form["email"];} ?>" required>
             </div>
         </div>
 
         <div class="form-row my-3">
             <div class="col">
                 <label for="country">Pays : <span style="color:#cc992b">*</span></label>
-                <select id="country" name="country" class="form-control" id="country" required>
+                <select id="country" name="country" class="form-control" id="country" value="<?php if($sanitized_form["country"] != ""){echo $sanitized_form["country"];} ?>" required>
                     <option value="other">Selectionnez votre pays</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
@@ -313,7 +313,7 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="subject">Sujet :</label>
-                <select class="form-control" id="subject" required>
+                <select class="form-control" id="subject" name="subject" value="<?php if($sanitized_form["subject"] != ""){echo $sanitized_form["subject"];} ?>" required>
                     <option value="other" selected>Choisissez le sujet de votre message</option>
                     <option value="question">J'ai une question à propos d'un produit</option>
                     <option value="reclamation">J'ai une problème avec un produit</option>
@@ -325,19 +325,19 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="message">Message : <span style="color:#cc992b">*</span></label>
-                <textarea class="form-control" placeholder="Votre message" name="message" id="message" required></textarea>
+                <textarea class="form-control" placeholder="Votre message" name="message" id="message" required>value="<?php if($sanitized_form["message"] != ""){echo $sanitized_form["message"];} ?>"</textarea>
             </div>
         </div>
 
         <!-- HONEY POT -->
-            <div class="col sacamerde" id="sacamerde">
+            <div class="col maya" id="maya">
                 <label for="model">Modèle</label>
                 <input type="text" class="form-control" placeholder="Modèle de votre raspberry" name="model" autocomplete="off">
             </div>
         <!-- FIN DU HONEY POT -->
 
         <div class="d-flex flex-column flex-md-row justify-content-end">
-            <p id="formError" style="color:red;"></p>
+            <p id="formError" style="color:red"></p>
             <input type="submit" value="Envoyer" class="btn bg-color mb-5 ml-3" id="submit" >
         </div>
     </form>
