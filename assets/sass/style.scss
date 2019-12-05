@@ -11,6 +11,7 @@ $linkColor: #FFF;
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'bellota';
   src: url('../fonts/Bellota-Bold-webfont.woff') format('woff');
@@ -27,14 +28,15 @@ body {
 
   .bg-color {
     background-color: $primaryColor;
-    color:$linkColor;
+    color: $linkColor;
   }
 
-  .bg-color:disabled{
-    opacity:0.3;
+  .bg-color:disabled {
+    opacity: 0.3;
     cursor: not-allowed;
-    &:hover{
-      color:$linkColor;
+
+    &:hover {
+      color: $linkColor;
     }
   }
 
@@ -48,6 +50,7 @@ body {
       }
     }
   }
+
   .navbar-dark .navbar-nav {
     .nav-link {
       color: $linkColor;
@@ -64,20 +67,21 @@ body {
     }
   }
 
-  .btn.btn-primary.bg-color{
+  .btn.btn-primary.bg-color {
     background-color: $primaryColor;
     border-color: $primaryColor;
 
-    &:hover{
+    &:hover {
       background-color: $secondaryColor;
       border-color: $secondaryColor;
-      color : $primaryColor;
+      color: $primaryColor;
     }
   }
 
-  .card{
+  .card {
     transition: 0.2s ease;
-    &:hover{
+
+    &:hover {
       transform: scale(1.04);
     }
   }
@@ -85,8 +89,6 @@ body {
 
 
   footer {
-    position: sticky;
-    top: 0px;
     background-color: $primaryColor;
     color: $linkColor;
 
@@ -105,11 +107,11 @@ body {
   }
 }
 
-form>div#maya{
-  position:absolute !important;
-  bottom:0 !important;
-  left:-1000 !important;
-  opacity : 0;
-  height:0;
-  width:0 !important;
+form>div#maya {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: -1000 !important;
+  opacity: 0;
+  height: 0;
+  width: 0 !important;
 }
