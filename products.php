@@ -4,7 +4,7 @@ $page = "products";
 // <!----------- Header (with head an body tags) ----------->
 
 include 'assets/php/header.php';
-include 'assets/php/card.php'; ?>
+include 'assets/php/generation_functions.php'; ?>
 
 
 <h1 class="text-center my-5">Nos produits</h1>
