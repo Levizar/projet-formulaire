@@ -28,23 +28,23 @@ include 'assets/php/generation_functions.php';?>
         </div>
 
         <div class="form-row my-3">
-            <legend class="col-form-label col-4 col-sm-2 pt-0">Genre : <span style="color:#cc992b">*</span><span id="err_gender"></span></legend>
+            <label class="col-form-label col-4 col-sm-2 pt-0">Genre : <span style="color:#cc992b">*</span><span id="err_gender"></span></label>
             <div class="col-4 p-2 rounded" id="radios">
                 <div class="form-check">
                     <input class="form-check-input gender" type="radio" name="gender" id="Homme" value="Homme">
-                    <label class="form-check-label" for="gridRadios1">
+                    <label class="form-check-label" for="Homme">
                         Homme
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input gender" type="radio" name="gender" id="Femme" value="Femme">
-                    <label class="form-check-label" for="gridRadios2">
+                    <label class="form-check-label" for="Femme">
                         Femme
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input gender" type="radio" name="gender" id="Autre" value="Autre">
-                    <label class="form-check-label" for="gridRadios3">
+                    <label class="form-check-label" for="Autre">
                         Autre
                     </label>
                 </div>
@@ -55,14 +55,14 @@ include 'assets/php/generation_functions.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="email">E-mail : <span style="color:#cc992b">*  <?php if($arr_errors["email"] != null){echo $arr_errors["email"];} ?></span></label>
-                <input type="mail" class="form-control" placeholder="Votre adresse e-mail" name="email" id="email" value="<?php if($sanitized_form["email"] != ""){echo $sanitized_form["email"];} ?>">
+                <input type="email" class="form-control" placeholder="Votre adresse e-mail" name="email" id="email" value="<?php if($sanitized_form["email"] != ""){echo $sanitized_form["email"];} ?>">
             </div>
         </div>
 
         <div class="form-row my-3">
             <div class="col">
                 <label for="country">Pays : <span style="color:#cc992b">*  <?php if($arr_errors["country"] != null){echo $arr_errors["country"];} ?></span></label>
-                <select id="country" name="country" class="form-control" id="country" value="<?php if($sanitized_form["country"] != ""){echo $sanitized_form["country"];} ?>">
+                <select id="country" name="country" class="form-control" id="country">
                     <option value="other">Choisir un pays</option>
                     <?php foreach ($countries as $country) {
                         generate_country_options($country);
@@ -74,8 +74,8 @@ include 'assets/php/generation_functions.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="subject">Sujet :<span style="color:#cc992b"><?php if($arr_errors["country"] != null){echo ' *  ' . $arr_errors["country"];} ?></span></label>
-                <select class="form-control" id="subject" name="subject" value="<?php if($sanitized_form["subject"] != ""){echo $sanitized_form["subject"];} ?>">
-                    <option value="other" selected>Choisissez le sujet de votre message</option>
+                <select class="form-control" id="subject" name="subject">
+                    <option value="other">Choisissez le sujet de votre message</option>
                     <option value="question">J'ai une question à propos d'un produit</option>
                     <option value="reclamation">J'ai une problème avec un produit</option>
                     <option value="buy">Je souhaiterais commander un produit</option>
@@ -93,7 +93,7 @@ include 'assets/php/generation_functions.php';?>
         <!-- HONEY POT -->
             <div class="col maya" id="maya">
                 <label for="model">Modèle</label>
-                <input type="text" class="form-control" placeholder="Modèle de votre raspberry" name="model" autocomplete="off">
+                <input type="text" class="form-control" placeholder="Modèle de votre raspberry" name="model" autocomplete="off" id="model">
             </div>
         <!-- FIN DU HONEY POT -->
 

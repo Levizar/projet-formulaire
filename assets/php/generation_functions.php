@@ -64,7 +64,7 @@ $countries =[
 "Congo, Democratic Republic of the",
 "Congo, Republic of the",
 "Costa Rica",
-"Cote d'Ivoire",
+"Cote d Ivoire",
 "Croatia",
 "Cuba",
 "Cyprus",
