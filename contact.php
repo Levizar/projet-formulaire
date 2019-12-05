@@ -325,7 +325,7 @@ include 'assets/php/header.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="message">Message : <span style="color:#cc992b">*</span></label>
-                <textarea class="form-control" placeholder="Votre message" name="message" id="message" required><?php if($sanitized_form["message"] != ""){echo $sanitized_form["message"];} ?>"</textarea>
+                <textarea class="form-control" placeholder="Votre message" name="message" id="message" required><?php if($sanitized_form["message"] != ""){echo $sanitized_form["message"];} ?></textarea>
             </div>
         </div>
 
