@@ -18,11 +18,11 @@ include 'assets/php/generation_functions.php';?>
     <form method="POST" action="assets/php/form.php">
         <div class="form-row my-3">
             <div class="col">
-                <label for="firstname">Prénom : <span style="color:#cc992b">*</span></label>
+                <label for="firstname">Prénom : <span style="color:#cc992b">* <?php if($arr_errors["firstname"] != null){echo $arr_errors["firstname"];} ?></span></label>
                 <input type="text" class="form-control" placeholder="Votre prénom" name="firstname" id="firstname" value="<?php if($sanitized_form["firstname"] != ""){echo $sanitized_form["firstname"];} ?>" required max-length="20">
             </div>
             <div class="col">
-            <label for="lastname">Nom : <span style="color:#cc992b">*</span></label>
+            <label for="lastname">Nom : <span style="color:#cc992b">* <?php if($arr_errors["lastname"] != null){echo $arr_errors["lastname"];} ?></span></label>
             <input type="text" class="form-control" placeholder="Votre nom" name="lastname" id="lastname" value="<?php if($sanitized_form["lastname"] != ""){echo $sanitized_form["lastname"];} ?>" required max-length="20">
             </div>
         </div>
@@ -53,14 +53,14 @@ include 'assets/php/generation_functions.php';?>
       
         <div class="form-row my-3">
             <div class="col">
-                <label for="email">E-mail : <span style="color:#cc992b">*</span></label>
+                <label for="email">E-mail : <span style="color:#cc992b">*  <?php if($arr_errors["email"] != null){echo $arr_errors["email"];} ?></span></label>
                 <input type="mail" class="form-control" placeholder="Votre adresse e-mail" name="email" id="email" value="<?php if($sanitized_form["email"] != ""){echo $sanitized_form["email"];} ?>" required>
             </div>
         </div>
 
         <div class="form-row my-3">
             <div class="col">
-                <label for="country">Pays : <span style="color:#cc992b">*</span></label>
+                <label for="country">Pays : <span style="color:#cc992b">*  <?php if($arr_errors["country"] != null){echo $arr_errors["country"];} ?></span></label>
                 <select id="country" name="country" class="form-control" id="country" value="<?php if($sanitized_form["country"] != ""){echo $sanitized_form["country"];} ?>" required>
                     <option value="other">Choisir un pays</option>
                     <?php foreach ($countries as $country) {
@@ -72,7 +72,7 @@ include 'assets/php/generation_functions.php';?>
 
         <div class="form-row my-3">
             <div class="col">
-                <label for="subject">Sujet :</label>
+                <label for="subject">Sujet :<span style="color:#cc992b"><?php if($arr_errors["country"] != null){echo ' *  ' . $arr_errors["country"];} ?></span></label>
                 <select class="form-control" id="subject" name="subject" value="<?php if($sanitized_form["subject"] != ""){echo $sanitized_form["subject"];} ?>" required>
                     <option value="other" selected>Choisissez le sujet de votre message</option>
                     <option value="question">J'ai une question à propos d'un produit</option>
@@ -84,7 +84,7 @@ include 'assets/php/generation_functions.php';?>
 
         <div class="form-row my-3">
             <div class="col">
-                <label for="message">Message : <span style="color:#cc992b">*</span></label>
+                <label for="message">Message : <span style="color:#cc992b">* <?php if($arr_errors["message"] != null){echo $arr_errors["message"];} ?></span></label>
                 <textarea class="form-control" placeholder="Votre message" name="message" id="message" required><?php if($sanitized_form["message"] != ""){echo $sanitized_form["message"];} ?></textarea>
             </div>
         </div>

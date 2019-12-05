@@ -78,7 +78,7 @@ function form_processing()
                 $arr_filters_validers["$key"],
                 array("options" => array("regexp" => $arr_regexp_validers["$key"]))
             )) {
-                $arr_errors["$key"] = "$key n'est pas valide";
+                $arr_errors["$key"] = "L'information $key n'est pas valide";
                 $is_form_valid = false;
             }
         }
