@@ -84,7 +84,8 @@ function form_processing()
         }
         if ($is_form_valid) {
             // Action to do if all validation step passed
-
+            foreach ($arr_errors as $key => $value) $arr_errors["$key"] = null;
+            
             $mail_to = "winzard@hotmail.com";
             $mail_subject = 'Subject: ' . $sanitized_form["subject"];
             $mail_content = 'From: ' . $sanitized_form["email"] . '\n';
