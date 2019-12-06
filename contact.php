@@ -49,7 +49,7 @@ include 'assets/php/generation_functions.php';?>
                     </label>
                 </div>
             </div>
-            <div id="err_radio" class="col-12 col-sm-4 error">Coucou petite perruche</div>
+            <div id="err_radio" class="col-12 col-sm-4 error"><?php if(isset($arr_errors) && $arr_errors["email"] != null){echo $arr_errors["email"];} ?></div>
         </div>
       
         <div class="form-row my-3">
