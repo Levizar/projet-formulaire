@@ -1,10 +1,10 @@
 <?php
+session_start();
 $page = "form-validate";
 
 // <!----------- Header (with head an body tags) ----------->
 
 include 'assets/php/header.php';
-session_start();
 ?>
 
 <div class="col-10 container d-flex align-items-center flex-column">
