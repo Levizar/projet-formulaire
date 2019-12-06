@@ -84,6 +84,10 @@ body .card:hover {
           transform: scale(1.04);
 }
 
+body .error {
+  color: rgba(207, 85, 83, 0.9);
+}
+
 body footer {
   background-color: #15c5bd;
   color: #FFF;
