@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 session_start();
 
 // thx to stackoverflow
@@ -89,7 +92,7 @@ function form_processing()
         if ($is_form_valid) {
             // Action to do if all validation step passed
             foreach ($arr_errors as $key => $value) $arr_errors["$key"] = null;
-            
+            // Prepare the mail data
             $mail_to = "winzard@hotmail.com";
             $mail_subject = 'Subject: ' . $sanitized_form["subject"];
             $mail_content = 'From: ' . $sanitized_form["email"] . '\n';
@@ -98,13 +101,14 @@ function form_processing()
             $mail_content .= $sanitized_form["country"] . '\n';
             $mail_content .= $sanitized_form["subject"] . '\n\n';
             $mail_content .= $sanitized_form["message"];
-            
+            //sending the mail
             mail($mail_to, $mail_subject, $mail_content);
-            
+
             // Erase the super_global
             $_SESSION = array();
+
             // redirection to the valid send page if everything went good
-            redirect("../../valid-form.php");
+            // redirect("../../valid-form.php");
 
         } else {
             // if the form isn't valid
