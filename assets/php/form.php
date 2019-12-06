@@ -101,12 +101,18 @@ function form_processing()
             $mail_content .= $sanitized_form["country"] . '\n';
             $mail_content .= $sanitized_form["subject"] . '\n\n';
             $mail_content .= $sanitized_form["message"];
-
+            
             //sending the mail
             mail($mail_to, $mail_subject, $mail_content);
 
             // Erase the super_global
             $_SESSION = array();
+
+            if (mail($mail_to, $mail_subject, $mail_content)){
+                $_SESSION['damail'] = "mail envoyé";
+            } else {
+                $_SESSION['damail'] = "mail MORT !!!!";
+            }
 
             // redirection to the valid send page if everything went good
             redirect("../../valid-form.php");
