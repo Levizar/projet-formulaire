@@ -96,7 +96,7 @@ function form_processing()
             $mail_content .= $sanitized_form["lastname"] .' ' . $sanitized_form["firstname"] . '\n';
             $mail_content .= $sanitized_form["gender"] . '\n';
             $mail_content .= $sanitized_form["country"] . '\n';
-            $mail_content .= $sanitized_form["subject"] . '\n';
+            $mail_content .= $sanitized_form["subject"] . '\n\n';
             $mail_content .= $sanitized_form["message"];
             
             mail($mail_to, $mail_subject, $mail_content);
