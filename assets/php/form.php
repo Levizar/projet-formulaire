@@ -93,7 +93,7 @@ function form_processing()
             // Action to do if all validation step passed
             foreach ($arr_errors as $key => $value) $arr_errors["$key"] = null;
             // Prepare the mail data
-            $mail_to = "winzard@hotmail.com";
+            $mail_to = "ducheminarnaud6@gmail.com";
             $mail_subject = 'Subject: ' . $sanitized_form["subject"];
             $mail_content = 'From: ' . $sanitized_form["email"] . '\n';
             $mail_content .= $sanitized_form["lastname"] .' ' . $sanitized_form["firstname"] . '\n';
@@ -108,11 +108,7 @@ function form_processing()
             // Erase the super_global
             $_SESSION = array();
 
-            if (mail($mail_to, $mail_subject, $mail_content)){
-                $_SESSION['damail'] = "mail envoyé";
-            } else {
-                $_SESSION['damail'] = "mail MORT !!!!";
-            }
+            $_SESSION['mail_confirmation'] = mail($mail_to, $mail_subject, $mail_content)? true : false;
 
             // redirection to the valid send page if everything went good
             redirect("../../valid-form.php");
