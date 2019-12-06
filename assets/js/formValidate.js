@@ -7,7 +7,7 @@ let message = document.getElementById('message');
 let radios = document.getElementById('radios');
 let man = document.getElementById("Homme");
 let woman = document.getElementById("Femme");
-let otherGender = document.getElementById("Autre");
+let otherGender = document.getElementById("Non-binaire");
 let initBorderColor = firstname.style.borderColor;
 
 

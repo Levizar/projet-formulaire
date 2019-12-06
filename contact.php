@@ -87,7 +87,7 @@ include 'assets/php/generation_functions.php';?>
 </div>
 
 
-<script src="assets/js/formValidate.js"></script>
+<?php echo '<script src="assets/js/formValidate.js"></script>'?>
 
 <!-- Footer (with end tags) -->
 
