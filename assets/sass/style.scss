@@ -88,6 +88,12 @@ body {
 
   .error{
     color:rgba(207, 85, 83,0.9);
+    font-size: 0.8rem;
+  }
+
+  .form-error{
+    background-color: rgba(207, 85, 83,0.3);
+    border:1px solid  rgba(207, 85, 83,0.9);
   }
 
 

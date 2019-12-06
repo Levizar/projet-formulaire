@@ -95,10 +95,12 @@ include 'assets/php/generation_functions.php';?>
             </div>
         <!-- FIN DU HONEY POT -->
 
-    </form>
-    <div class="d-flex flex-column flex-md-row justify-content-end">
+        <div class="d-flex flex-column flex-md-row justify-content-end" id="btn-delete-js">
         <p id="formError" style="color:red"></p>
         <button class="btn bg-color mb-5 ml-3" id="submit">Envoyer</button>
+    </div>
+    </form>
+    <div class="d-flex flex-column flex-md-row justify-content-end" id="btn-pop-js">
     </div>
 </div>
 
