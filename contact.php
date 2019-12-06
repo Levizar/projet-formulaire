@@ -28,7 +28,7 @@ include 'assets/php/generation_functions.php';?>
         </div>
 
         <div class="form-row my-3">
-            <label class="col-form-label pt-0">Genre : <span class="error">* <?php if(isset($arr_errors) && $arr_errors["gender"] != null){echo $arr_errors["gender"];} ?></label>
+            <label class="col-form-label pt-0">Genre : <span class="error">* <?php if(isset($arr_errors) && $arr_errors["gender"] != null){echo $arr_errors["gender"];} ?></span></label>
             <div class="col-4 p-2 rounded" id="radios">
             <?php foreach ($genders as $gender) generate_gender($gender);?>
             </div>
@@ -44,7 +44,7 @@ include 'assets/php/generation_functions.php';?>
         <div class="form-row my-3">
             <div class="col">
                 <label for="country">Pays : <span class="error">*  <?php if(isset($arr_errors) && $arr_errors["country"] != null){echo $arr_errors["country"];} ?></span></label>
-                <select id="country" name="country" class="form-control" id="country">
+                <select id="country" name="country" class="form-control">
                     <option value="other">Choisir un pays</option>
                     <?php foreach ($countries as $country) generate_country_options($country);?>
                 </select>
