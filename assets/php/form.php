@@ -101,6 +101,7 @@ function form_processing()
             $mail_content .= $sanitized_form["country"] . '\n';
             $mail_content .= $sanitized_form["subject"] . '\n\n';
             $mail_content .= $sanitized_form["message"];
+
             //sending the mail
             mail($mail_to, $mail_subject, $mail_content);
 
@@ -108,7 +109,7 @@ function form_processing()
             $_SESSION = array();
 
             // redirection to the valid send page if everything went good
-            // redirect("../../valid-form.php");
+            redirect("../../valid-form.php");
 
         } else {
             // if the form isn't valid
