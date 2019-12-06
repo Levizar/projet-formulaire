@@ -28,7 +28,7 @@ include 'assets/php/generation_functions.php';?>
         </div>
 
         <div class="form-row my-3">
-            <label class="col-form-label col-4 col-sm-2 pt-0">Genre : <span class="error">*</span><span id="err_gender"></span></label>
+            <label class="col-form-label pt-0">Genre : <span class="error">* <?php if(isset($arr_errors) && $arr_errors["email"] != null){echo $arr_errors["email"];} ?></label>
             <div class="col-4 p-2 rounded" id="radios">
                 <div class="form-check">
                     <input class="form-check-input gender" type="radio" name="gender" id="Homme" value="Homme">
@@ -49,7 +49,6 @@ include 'assets/php/generation_functions.php';?>
                     </label>
                 </div>
             </div>
-            <div id="err_radio" class="col-12 col-sm-4 error"><?php if(isset($arr_errors) && $arr_errors["email"] != null){echo $arr_errors["email"];} ?></div>
         </div>
       
         <div class="form-row my-3">
