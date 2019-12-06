@@ -84,8 +84,22 @@ function form_processing()
         }
         if ($is_form_valid) {
             // Action to do if all validation step passed
+            foreach ($arr_errors as $key => $value) $arr_errors["$key"] = null;
+            
+            $mail_to = "winzard@hotmail.com";
+            $mail_subject = 'Subject: ' . $sanitized_form["subject"];
+            $mail_content = 'From: ' . $sanitized_form["email"] . '\n';
+            $mail_content .= $sanitized_form["lastname"] .' ' . $sanitized_form["firstname"] . '\n';
+            $mail_content .= $sanitized_form["gender"] . '\n';
+            $mail_content .= $sanitized_form["country"] . '\n';
+            $mail_content .= $sanitized_form["subject"] . '\n';
+            $mail_content .= $sanitized_form["message"];
+            
+            // 
 
-            // TO DO: SEND THE EMAIL
+
+
+            // TO DO: SEND THE lastname
 
             // redirection to the valid send page if everything went good
             redirect("../../valid-form.php");
