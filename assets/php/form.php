@@ -94,7 +94,7 @@ function form_processing()
             $mail_content .= $sanitized_form["country"] . '\n';
             $mail_content .= $sanitized_form["subject"] . '\n';
             $mail_content .= $sanitized_form["message"];
-            
+            $_SESSION = array();
             // 
 
 

@@ -64,9 +64,7 @@ include 'assets/php/generation_functions.php';?>
                 <label for="country">Pays : <span style="color:#cc992b">*  <?php if($arr_errors["country"] != null){echo $arr_errors["country"];} ?></span></label>
                 <select id="country" name="country" class="form-control" id="country">
                     <option value="other">Choisir un pays</option>
-                    <?php foreach ($countries as $country) {
-                        generate_country_options($country);
-                    } ?>
+                    <?php foreach ($countries as $country) generate_country_options($country);?>
                 </select>
             </div>
         </div>
