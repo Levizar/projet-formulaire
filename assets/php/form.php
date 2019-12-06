@@ -91,24 +91,28 @@ function form_processing()
         }
         if ($is_form_valid) {
             // Action to do if all validation step passed
-            foreach ($arr_errors as $key => $value) $arr_errors["$key"] = null;
-            // Prepare the mail data
+            foreach ($arr_errors as $key => $value) {
+                $arr_errors["$key"] = null;
+            }
+
+// Prepare the mail data
             $mail_to = "ducheminarnaud6@gmail.com";
             $mail_subject = 'Subject: ' . $sanitized_form["subject"];
-            $mail_content = 'From: ' . $sanitized_form["email"] . '\n';
-            $mail_content .= $sanitized_form["lastname"] .' ' . $sanitized_form["firstname"] . '\n';
-            $mail_content .= $sanitized_form["gender"] . '\n';
-            $mail_content .= $sanitized_form["country"] . '\n';
-            $mail_content .= $sanitized_form["subject"] . '\n\n';
-            $mail_content .= $sanitized_form["message"];
-            
+            $mail_content = '<p>From: ' . $sanitized_form["email"] . '</p>';
+            $mail_content .= '<p>' . $sanitized_form["lastname"] . ' ' . $sanitized_form["firstname"] . '</p>';
+            $mail_content .= '<p>' . $sanitized_form["gender"] . '</p>';
+            $mail_content .= '<p>' . $sanitized_form["country"] . '</p>';
+            $mail_content .= '<p>' . $sanitized_form["subject"] . '</p>';
+            $mail_content .= '<p>' . $sanitized_form["message"] . '</p>';
+
             //sending the mail
+
             mail($mail_to, $mail_subject, $mail_content);
 
             // Erase the super_global
             $_SESSION = array();
 
-            $_SESSION['mail_confirmation'] = mail($mail_to, $mail_subject, $mail_content)? true : false;
+            $_SESSION['mail_confirmation'] = mail($mail_to, $mail_subject, $mail_content) ? true : false;
 
             // redirection to the valid send page if everything went good
             redirect("../../valid-form.php");
