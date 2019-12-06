@@ -28,26 +28,9 @@ include 'assets/php/generation_functions.php';?>
         </div>
 
         <div class="form-row my-3">
-            <label class="col-form-label pt-0">Genre : <span class="error">* <?php if(isset($arr_errors) && $arr_errors["email"] != null){echo $arr_errors["email"];} ?></label>
+            <label class="col-form-label pt-0">Genre : <span class="error">* <?php if(isset($arr_errors) && $arr_errors["gender"] != null){echo $arr_errors["gender"];} ?></label>
             <div class="col-4 p-2 rounded" id="radios">
-                <div class="form-check">
-                    <input class="form-check-input gender" type="radio" name="gender" id="Homme" value="Homme">
-                    <label class="form-check-label" for="Homme">
-                        Homme
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input gender" type="radio" name="gender" id="Femme" value="Femme">
-                    <label class="form-check-label" for="Femme">
-                        Femme
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input gender" type="radio" name="gender" id="Autre" value="Autre">
-                    <label class="form-check-label" for="Autre">
-                        Autre
-                    </label>
-                </div>
+            <?php foreach ($genders as $gender) generate_gender($gender);?>
             </div>
         </div>
       
@@ -70,7 +53,7 @@ include 'assets/php/generation_functions.php';?>
 
         <div class="form-row my-3">
             <div class="col">
-                <label for="subject">Sujet :<span class="error"><?php if(isset($arr_errors) && $arr_errors["country"] != null){echo ' *  ' . $arr_errors["country"];} ?></span></label>
+                <label for="subject">Sujet : <span class="error"><?php if(isset($arr_errors) && $arr_errors["subject"] != null){echo ' *  ' . $arr_errors["country"];} ?></span></label>
                 <select class="form-control" id="subject" name="subject">
                     <option value="other">Choisissez le sujet de votre message</option>
                     <option value="question">J'ai une question à propos d'un produit</option>

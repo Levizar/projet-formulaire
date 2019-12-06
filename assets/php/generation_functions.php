@@ -14,6 +14,36 @@ function generate_card($img_file_name, $title, $content, $link = "#"){
             </div>";
 }
 
+function generate_gender($gender){
+    if (isset($_SESSION["sanitized_form"]) && $_SESSION["sanitized_form"]['gender'] == $gender){
+        echo 
+        "
+        <div class='form-check'>
+            <input class='form-check-input gender' type='radio' name='gender' id='$gender' value='$gender' checked>
+            <label class='form-check-label' for='$gender'>
+                $gender
+            </label>
+        </div>
+        ";
+    } else{
+        echo 
+        "
+        <div class='form-check'>
+            <input class='form-check-input gender' type='radio' name='gender' id='$gender' value='$gender'>
+            <label class='form-check-label' for='$gender'>
+                $gender
+            </label>
+        </div>
+        ";
+    }
+}
+
+$genders = [
+    "Homme",
+    "Femme",
+    "Non-binaire"
+];
+
 function generate_country_options($country){
     if (isset($_SESSION["sanitized_form"]) && $_SESSION["sanitized_form"]['country'] == $country){
         echo "<option value='$country' selected>$country</option>";

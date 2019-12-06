@@ -82,6 +82,10 @@ function form_processing()
                 $is_form_valid = false;
             }
         }
+        if ($sanitized_form["country"] == "other") {
+            $is_form_valid = false;
+            $arr_errors["country"] = '<i class="fas fa-exclamation-circle"></i> Champs invalide';
+        }
         if ($is_form_valid) {
             // Action to do if all validation step passed
             foreach ($arr_errors as $key => $value) $arr_errors["$key"] = null;
@@ -94,13 +98,11 @@ function form_processing()
             $mail_content .= $sanitized_form["country"] . '\n';
             $mail_content .= $sanitized_form["subject"] . '\n';
             $mail_content .= $sanitized_form["message"];
+            
+            mail($mail_to, $mail_subject, $mail_content);
+            
+            // Erase the super_global
             $_SESSION = array();
-            // 
-
-
-
-            // TO DO: SEND THE lastname
-
             // redirection to the valid send page if everything went good
             redirect("../../valid-form.php");
 
