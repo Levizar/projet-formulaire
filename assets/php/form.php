@@ -95,8 +95,8 @@ function form_processing()
                 $arr_errors["$key"] = null;
             }
 
-// Prepare the mail data
-            $mail_to = "ducheminarnaud6@gmail.com";
+            // Prepare the mail data
+            $mail_to = "bartolettibrice@gmail.com";
             $mail_subject = 'Subject: ' . $sanitized_form["subject"];
             $mail_content = '<p>From: ' . $sanitized_form["email"] . '</p>';
             $mail_content .= '<p>' . $sanitized_form["lastname"] . ' ' . $sanitized_form["firstname"] . '</p>';
