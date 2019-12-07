@@ -125,7 +125,7 @@ function form_processing()
             redirect("../../contact.php");
         }
     } else {
-        // Honey Pot was taken thus we redirect to the valid-form page
+        // Honey Pot was taken thus we redirect directly to the valid-form page
         redirect("../../valid-form.php");
     }
 }
