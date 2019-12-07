@@ -27,6 +27,15 @@ body {
           justify-content: space-between;
 }
 
+body#accueil {
+  background: url("../img/raspberry_wall_paper.jpg") center center;
+  background-size: cover;
+}
+
+body#accueil .jumbotron {
+  background-color: rgba(233, 236, 239, 0.7);
+}
+
 body .bg-color {
   background-color: #15c5bd;
   color: #FFF;

@@ -26,6 +26,15 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
+  &#accueil {
+    background: url('../img/raspberry_wall_paper.jpg') center center;
+    background-size: cover;
+
+    .jumbotron {
+      background-color: rgba(233, 236, 239, 0.7);
+    }
+  }
+
   .bg-color {
     background-color: $primaryColor;
     color: $linkColor;
@@ -86,14 +95,14 @@ body {
     }
   }
 
-  .error{
-    color:rgba(207, 85, 83,0.9);
+  .error {
+    color: rgba(207, 85, 83, 0.9);
     font-size: 0.8rem;
   }
 
-  .form-error{
-    background-color: rgba(207, 85, 83,0.3);
-    border:1px solid  rgba(207, 85, 83,0.9);
+  .form-error {
+    background-color: rgba(207, 85, 83, 0.3);
+    border: 1px solid rgba(207, 85, 83, 0.9);
   }
 
 
@@ -125,4 +134,3 @@ form>div#maya {
   height: 0;
   width: 0 !important;
 }
-

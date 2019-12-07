@@ -22,13 +22,13 @@ let messageOk = false;
 document.getElementById('btn-delete-js').parentNode.removeChild(document.getElementById('btn-delete-js'));
 
 document.getElementById('btn-pop-js').innerHTML = `<p id="formError" style="color:red"></p>
-<button class="btn bg-color mb-5 ml-3" id="submit">Envoyer</button>`;
+<button class="btn bg-color mb-1 ml-3" id="submit">Envoyer</button>`;
 
 let formError = document.getElementById('formError');
 let submit = document.getElementById('submit');
 
 
-window.addEventListener("load", ()=>{
+window.addEventListener("load", () => {
     firstnameOk = false;
     lastnameOk = false;
     genderOk = false;
@@ -36,93 +36,94 @@ window.addEventListener("load", ()=>{
     countryOk = false;
     messageOk = false;
 
-    if(firstname.value != ''){
+    if (firstname.value != '') {
         firstnameOk = true;
     }
-    if(lastname.value != ''){
+    if (lastname.value != '') {
         lastnameOk = true;
     }
-    if(email.value != ''){
+    if (email.value != '') {
         emailOk = true;
     }
-    if(country.value != 'other'){
+    if (country.value != 'other') {
         countryOk = true;
     }
-    if(message.value != ''){
+    if (message.value != '') {
         messageOk = true;
     }
-    if(man.checked || woman.checked || otherGender.checked){
+    if (man.checked || woman.checked || otherGender.checked) {
         genderOk = true;
     }
 })
 
 const checkFirstName = (checkEmpty = false) => {
     let regEx = RegExp(/[1-9]/);
-    if(regEx.test(firstname.value)){
+    if (regEx.test(firstname.value)) {
         firstname.classList.add('form-error');
         firstnameOk = false;
-    }else if(firstname.value == ''){
+    } else if (firstname.value == '') {
         firstnameOk = false;
-        if(checkEmpty == true){
+        if (checkEmpty == true) {
             firstname.classList.add('form-error');
         }
-    }else{
+    } else {
         firstname.classList.remove('form-error');
         firstnameOk = true;
-    }}
+    }
+}
 
 
 const checkLastName = (checkEmpty = false) => {
     let regEx = RegExp(/[1-9]/);
-    if(regEx.test(lastname.value)){
+    if (regEx.test(lastname.value)) {
         lastname.classList.add('form-error');
         lastnameOk = false;
-    }else if(lastname.value == ''){
+    } else if (lastname.value == '') {
         lastnameOk = false;
-        if(checkEmpty == true){
+        if (checkEmpty == true) {
             lastname.classList.add('form-error');
         }
-    }else{
+    } else {
         lastname.classList.remove('form-error');
         lastnameOk = true;
     }
 }
 
 const checkEmail = (checkEmpty = false) => {
-    let regEx = RegExp( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-    if(!regEx.test(email.value) && email.value != ''){
+    let regEx = RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+    if (!regEx.test(email.value) && email.value != '') {
         email.classList.add('form-error');
         emailOk = false;
-    }else if(email.value == ''){
+    } else if (email.value == '') {
         emailOk = false;
-        if(checkEmpty == true){
+        if (checkEmpty == true) {
             email.classList.add('form-error');
         }
-    }else{
+    } else {
         email.classList.remove('form-error');
         emailOk = true;
     }
 }
 
 const checkCountry = (checkEmpty = false) => {
-    if(country.value == 'other'){
+    if (country.value == 'other') {
         countryOk = false;
-        if(checkEmpty){
+        if (checkEmpty) {
             country.classList.add('form-error');
         }
-    }else{
+    } else {
         countryOk = true;
         country.classList.remove('form-error');
     }
 }
 
 const checkMessage = (checkEmpty = false) => {
-    if(message.value == ''){
-        if(checkEmpty){
+    if (message.value == '') {
+        if (checkEmpty) {
             message.classList.add('form-error');
         }
         messageOk = false;
-    }else{
+    } else {
         message.classList.remove('form-error');
         messageOk = true;
     }
@@ -130,56 +131,56 @@ const checkMessage = (checkEmpty = false) => {
 
 
 
-firstname.addEventListener('input',()=>{
+firstname.addEventListener('input', () => {
     checkFirstName();
     checkAndSubmit();
 });
 
-lastname.addEventListener('input',()=>{
+lastname.addEventListener('input', () => {
     checkLastName();
     checkAndSubmit();
 });
 
-Array.from(document.querySelectorAll(".gender")).forEach(gender => gender.addEventListener("click", ()=>{
+Array.from(document.querySelectorAll(".gender")).forEach(gender => gender.addEventListener("click", () => {
     radios.classList.remove('form-error');
     genderOk = true;
     checkAndSubmit();
 }))
 
-email.addEventListener('input',()=>{
+email.addEventListener('input', () => {
     checkEmail();
     checkAndSubmit();
 });
 
-country.addEventListener('input',()=>{
-   checkCountry();
-   checkAndSubmit();
+country.addEventListener('input', () => {
+    checkCountry();
+    checkAndSubmit();
 });
 
-message.addEventListener('input',()=>{
+message.addEventListener('input', () => {
     checkMessage();
     checkAndSubmit();
 });
 
 
 
-function checkAndSubmit(checkSubmit=false){
-    if(firstnameOk && lastnameOk && emailOk && messageOk && countryOk && genderOk){
+function checkAndSubmit(checkSubmit = false) {
+    if (firstnameOk && lastnameOk && emailOk && messageOk && countryOk && genderOk) {
         formError.innerHTML = "";
-        if(checkSubmit == true) form.submit();
+        if (checkSubmit == true) form.submit();
 
-    }else if (checkSubmit) {
+    } else if (checkSubmit) {
         formError.innerHTML = '<i class="fas fa-exclamation-circle"></i> Un ou plusieurs champs sont vides ou incorrects.'
     }
 }
 
 
 
-submit.addEventListener("click", ()=>{
+submit.addEventListener("click", () => {
 
-    if(man.checked || woman.checked || otherGender.checked){
+    if (man.checked || woman.checked || otherGender.checked) {
         genderOk = true;
-    }else{
+    } else {
         radios.classList.add('form-error');
         genderOk = false;
     }
