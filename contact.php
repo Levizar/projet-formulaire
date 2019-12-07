@@ -16,7 +16,7 @@ include 'assets/php/header.php';
 include 'assets/php/generation_functions.php';?>
 
 
-<div class="container col-10 col-md-8 col-lg-6 ">
+<div class="container col-10 col-md-8 col-lg-6" id="formCont">
     <h1 class="text-center my-5">Contactez-nous</h1>
 
     <form method="POST" action="assets/php/form.php" id="form">
@@ -81,13 +81,11 @@ include 'assets/php/generation_functions.php';?>
         </div>
         <!-- FIN DU HONEY POT -->
 
-        <div class="d-flex flex-column flex-md-row justify-content-end" id="btn-delete-js">
+        <div class="d-flex flex-column flex-md-row justify-content-end" id="btn-to-move">
             <p id="formError" style="color:red"></p>
             <button class="btn bg-color mb-5 ml-3" id="submit">Envoyer</button>
         </div>
     </form>
-    <div class="d-flex flex-column flex-md-row justify-content-end" id="btn-pop-js">
-    </div>
 </div>
 
 

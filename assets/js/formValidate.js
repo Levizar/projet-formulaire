@@ -10,7 +10,6 @@ let woman = document.getElementById("Femme");
 let otherGender = document.getElementById("Non-binaire");
 let initBorderColor = firstname.style.borderColor;
 
-
 let firstnameOk = false;
 let lastnameOk = false;
 let genderOk = false;
@@ -18,15 +17,12 @@ let emailOk = false;
 let countryOk = false;
 let messageOk = false;
 
-
-document.getElementById('btn-delete-js').parentNode.removeChild(document.getElementById('btn-delete-js'));
-
-document.getElementById('btn-pop-js').innerHTML = `<p id="formError" style="color:red"></p>
-<button class="btn bg-color mb-1 ml-3" id="submit">Envoyer</button>`;
+// moving the button out of the form to avoid it to work in html the way
+let button = document.getElementById('btn-to-move');
+form.parentNode.insertBefore(button, form.nextSibling);
 
 let formError = document.getElementById('formError');
 let submit = document.getElementById('submit');
-
 
 window.addEventListener("load", () => {
     firstnameOk = false;
