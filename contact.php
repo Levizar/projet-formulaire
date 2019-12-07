@@ -16,7 +16,7 @@ include 'assets/php/header.php';
 include 'assets/php/generation_functions.php';?>
 
 
-<div class="container col-10 col-md-8 col-lg-6" id="formCont">
+<div class="container col-10 col-md-8 col-lg-6">
     <h1 class="text-center my-5">Contactez-nous</h1>
 
     <form method="POST" action="assets/php/form.php" id="form">
