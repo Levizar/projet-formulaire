@@ -41,7 +41,7 @@
 
 <body id="<?php echo "$page" ?>">
     <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-color mb-2">
-        <a class="navbar-brand text-center d-sm-none font-weight-bolder" href="index.php">Hackers Poulette</a>
+        <a class="navbar-brand text-center d-sm-none font-weight-bolder" href="index.php" rel="noopener">Hackers Poulette</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -52,22 +52,22 @@
     echo " active";
 }
 ?>">
-                    <a class="nav-link" href="index.php">Accueil</a>
+                    <a class="nav-link" href="index.php" rel="noopener">Accueil</a>
                 </li>
                 <li class="nav-item col-2 <?php if ($page == "products") {
     echo " active";
 }
 ?>">
-                    <a class="nav-link" href="products.php">Produits</a>
+                    <a class="nav-link" href="products.php" rel="noopener">Produits</a>
                 </li>
                 <li class="navbar-brand col-4 text-center d-none d-sm-inline-block">
-                    <a class="font-weight-bolder" href="index.php">Hackers Poulette</a>
+                    <a class="font-weight-bolder" href="index.php" rel="noopener">Hackers Poulette</a>
                 </li>
                 <li class="nav-item col-4 <?php if ($page == "contact") {
     echo " active";
 }
 ?>">
-                    <a class="nav-link text-sm-right" href="contact.php">Contactez-nous</a>
+                    <a class="nav-link text-sm-right" href="contact.php" rel="noopener">Contactez-nous</a>
                 </li>
             </ul>
         </div>

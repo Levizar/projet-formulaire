@@ -10,7 +10,7 @@ function generate_card($img_file_name, $title, $content, $link = "#")
                         <h5 class='card-title font-weight-bold'>$title</h5>
                         <p class='card-text'>$content</p>
                     </div>
-                    <a href='$link' class='btn btn-primary d-block bg-color mt-2' target='_blank'>Acheter</a>
+                    <a href='$link' class='btn btn-primary d-block bg-color mt-2' target='_blank' rel='noopener'>Acheter</a>
                 </div>
             </div>";
 }
