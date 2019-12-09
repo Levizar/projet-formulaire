@@ -104,10 +104,14 @@ function form_processing()
             $mail_content .= '<p>' . $sanitized_form["country"] . '</p>';
             $mail_content .= '<p>' . $sanitized_form["subject"] . '</p>';
             $mail_content .= '<p>' . $sanitized_form["message"] . '</p>';
+            $mail_content = wordwrap($mail_content, 70, "\r\n");
+
+            $headers[] = 'MIME-Version: 1.0';
+            $headers[] = 'Content-type: text/html; charset=iso-8859-1';
 
             //sending the mail
 
-            mail($mail_to, $mail_subject, $mail_content);
+            mail($mail_to, $mail_subject, $mail_content, implode("\r\n", $headers));
 
             // Erase the super_global
             $_SESSION = array();
