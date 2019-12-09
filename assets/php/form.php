@@ -98,7 +98,7 @@ function form_processing()
             // Prepare the mail data
             $mail_to = "bartolettibrice@gmail.com";
             $mail_subject = 'Subject: ' . $sanitized_form["subject"];
-            $mail_content = '<p>From: ' . $sanitized_form["email"] . '</p>';
+            $mail_content = '<p> From: ' . $sanitized_form["email"] . '</p>';
             $mail_content .= '<p>' . $sanitized_form["lastname"] . ' ' . $sanitized_form["firstname"] . '</p>';
             $mail_content .= '<p>' . $sanitized_form["gender"] . '</p>';
             $mail_content .= '<p>' . $sanitized_form["country"] . '</p>';
@@ -106,17 +106,14 @@ function form_processing()
             $mail_content .= '<p>' . $sanitized_form["message"] . '</p>';
             $mail_content = wordwrap($mail_content, 70, "\r\n");
 
+            // Activation of html in email
             $headers[] = 'MIME-Version: 1.0';
             $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-
-            //sending the mail
-
-            mail($mail_to, $mail_subject, $mail_content, implode("\r\n", $headers));
 
             // Erase the super_global
             $_SESSION = array();
 
-            $_SESSION['mail_confirmation'] = mail($mail_to, $mail_subject, $mail_content) ? true : false;
+            $_SESSION['mail_confirmation'] = mail($mail_to, $mail_subject, $mail_content, implode("\r\n", $headers)) ? true : false;
 
             // redirection to the valid send page if everything went good
             redirect("../../valid-form.php");
