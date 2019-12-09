@@ -20,14 +20,14 @@ The main goal of this project was to create a contact form with several requirem
 - Git
 - GitHub
 
-## Preview 
+## Preview
 
 ![Site printscreen](printscreens/produits.png)
 ![Site printscreen](printscreens/contact.png)
 
 ## Dates
 
-It has been done between Monday the 2nd of December and Friday the 6th of December.
+It has been done between Monday the 2nd of December and Monday the 9th of December.
 
 ## Team:
 
