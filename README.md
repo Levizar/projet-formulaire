@@ -1,6 +1,6 @@
 # projet-formulaire
 
-[Hackers Poulette's website](https://form-project-bbth.000webhostapp.com/)
+[Hackers Poulette's website](https://rabbinical-definiti.000webhostapp.com/)
 
 ![Site printscreen](accueil.png)
 
@@ -20,9 +20,14 @@ The main goal of this project was to create a contact form with several requirem
 - Git
 - GitHub
 
+## Preview 
+
+![Site printscreen](produits.png)
+![Site printscreen](contact.png)
+
 ## Dates
 
-It has been done between Monday 02/12/2019 December and Friday 6/12/2019.
+It has been done between Monday the 2nd of December and Friday the 6th of December.
 
 ## Team:
 
