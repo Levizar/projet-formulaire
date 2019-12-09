@@ -2,7 +2,7 @@
 
 [Hackers Poulette's website](https://rabbinical-definiti.000webhostapp.com/)
 
-![Site printscreen](accueil.png)
+![Site printscreen](printscreens/accueil.png)
 
 ## Goal
 
@@ -22,8 +22,8 @@ The main goal of this project was to create a contact form with several requirem
 
 ## Preview 
 
-![Site printscreen](produits.png)
-![Site printscreen](contact.png)
+![Site printscreen](printscreens/produits.png)
+![Site printscreen](printscreens/contact.png)
 
 ## Dates
 
