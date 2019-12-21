@@ -19,6 +19,8 @@ The main goal of this project was to create a contact form with several requirem
 - SASS
 - Git
 - GitHub
+- Lamp for test environnement (Brice)
+- Docker for developpement environnement (Brice)
 
 ## Preview
 
